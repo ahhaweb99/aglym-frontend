@@ -12,7 +12,7 @@ $(document).ready(function(){
   });
 
   function removeMenus() {
-  		$('#main-site-nav').removeAttr('style');
+  	$('#main-site-nav').removeAttr('style');
 		$('#main-site-nav').removeClass('on');
 
 		$('#language-nav').removeAttr('style');
@@ -20,6 +20,9 @@ $(document).ready(function(){
 
 		$('#search-field').removeClass('on');
 		$('#ipad-drop').removeClass('on');
+
+    $('#sub-nav').removeAttr('style');
+     $('#sub-nav').removeClass('on');
   }
 
 });

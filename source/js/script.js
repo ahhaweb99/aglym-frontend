@@ -1,21 +1,43 @@
 $(document).ready(function(){
 	//Script for top menus (main-site, language, search) =========================== //
-	var menuArray=[$('#main-site-nav'), $('#language-nav'), $('#search-field')];
+	var menuArray=[$('#main-site-nav'), $('#language-nav'), $('#search-field'), $('#sub-nav')];
 	var animDuration = 500;
 	//main mobile navigation toggle
 	$('#main-nav-link').click(function(){
-
 		if(menuArray[2].hasClass('on')) {
 			menuArray[2].removeClass('on');
-			setTimeout(function(){ toggleMenus(menuArray[0],menuArray[1]); }, animDuration)
+			setTimeout(function(){ toggleMenus(menuArray[0],menuArray[1]); }, animDuration);
 		} else {
 			toggleMenus(menuArray[0],menuArray[1]);
 		}
 		
 	});
 
-	function toggleMenus(m1, m2) {
+	$('#sub-nav-link').click(function(){
 
+			toggleSubNav();
+
+	});
+
+	function removeSubNav(){
+		$('#sub-nav').removeClass('on');
+		$('#sub-nav').removeAttr('style');
+
+	}
+
+	function toggleSubNav() {
+		$('#sub-nav').toggleClass('on');
+			if($('#sub-nav').hasClass('on')) {
+				menuAnim($('#sub-nav'));
+			} else {
+				$('#sub-nav').removeClass('on');
+				menuAnim($('#sub-nav'));
+			}
+			
+	}
+
+	function toggleMenus(m1, m2) {
+		removeSubNav();
 		if(m2.hasClass('on')) {
 			menusOff();
 			setTimeout(function(){ m1.toggleClass('on'); menuAnim(m1); },animDuration);
@@ -49,17 +71,28 @@ $(document).ready(function(){
 
 	function menuAnim(menu) {
 
-		var wrapperHeight = $('#main-nav-wrapper').height();
+		var wrapperHeight = menu.parent().height();
+		console.log(menu.attr('id'));
+		if(menu.attr('id') == 'sub-nav'){
+			wrapperHeight = wrapperHeight - 42;
+			//console.log('matches!');
+		}
+		// 	console.log('#main-nav');
+		// 	wrapperHeight = $('#main-nav-wrapper').height();
+		// } else {
+		// 	console.log('#sub-nav', menu.parent());
+		// 	wrapperHeight = $('#sub-nav').height();
+		// }
 
 		if(menu.hasClass('on')) {
 			menu.css('height', wrapperHeight);
 		} else {
 			menu.removeAttr('style');
-
 		}
 	};
 
 	function menusOff() {
+
 		$.each(menuArray, function() {
 			this.removeClass('on');
 			this.removeAttr('style');
