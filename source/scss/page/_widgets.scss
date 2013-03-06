@@ -1,0 +1,43 @@
+.widget {
+	border:1px solid $borderColor;
+	.widget-content {
+		@include rem('padding', 28px 22px);
+	}
+
+	h2 {
+		color:$autoGlymColor;
+		@include font-size(18);
+		font-weight: normal;
+		@include rem('margin-bottom', $baselineHeight);
+		@include rem('line-height', $baselineHeight);
+	}
+
+	@include widgetgrad;
+
+	.product {
+
+		img {
+			float:left;
+			@include rem('margin-right', 20px);
+			@include inline-block;
+		}
+
+		h3 {
+			@include inline-block;
+			width: 55%;
+			@include font-size(16);
+			font-weight: 700;
+			text-transform: none;
+			color:$white;
+		}
+
+		.price {
+			color:$priceColor;
+		}
+	}
+
+	.btn {
+		@include rem('padding', 0 10px);
+		float:right;
+	}
+}

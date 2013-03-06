@@ -1,0 +1,77 @@
+.structure--content {
+	@include box-sizing(border-box);
+	width:100%;
+	padding:0 $gutterWidth;
+	
+	margin:0 auto;
+}
+
+.structure--wrapper {
+	width:100%;
+}
+
+.header--wrapper {
+	position:absolute;
+	top:0;
+	z-index: 1000;
+	width:100%;
+}
+
+.header {
+	@include rem('margin-top', $gutterWidth);
+	@include rem('min-height', 56px);
+}
+
+.structure--mainarea {
+	position: relative;
+}
+
+.nav--wrapper {
+		@include rem('margin-bottom', 0px);
+}
+
+.nav--second-level {
+	@include rem('margin-top', 120px);
+	overflow: hidden;
+}
+
+
+// inner pages
+
+.structure--side-column {
+	display: none;
+	margin-bottom:$baselineHeight;
+}
+
+.structure--main-column {
+	width:100%;
+	min-height:400px;
+	margin-bottom:$baselineHeight*2;
+}
+
+
+.structure--widget-holder {
+	@include rem('margin-bottom', $baselineHeight*2);
+	width:100%;
+}
+
+.structure--wrapper {
+	@include rem('padding', 12px 0 10px);
+}
+
+
+.breadcrumb--wrapper {
+	@include rem('margin-bottom', $baselineHeight);
+	@include rem('padding', 20px 0 20px);
+}
+// grids
+
+.grid--container {
+	width:100%;
+}
+
+.grid {
+	@include inline-block(top);
+	width:100%;
+	
+}

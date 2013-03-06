@@ -1,0 +1,81 @@
+$imgPath:'../img/';
+$fontPath: '../fonts/';
+
+
+$black: #000;
+$white: #fff;
+$bgColor:#010101;
+$autoGlymColor:#eb1b35;
+
+$borderColor:$black;
+
+$bodyColor:$white;
+$bodyLight:#bcbec0;
+
+$formText:#818181;
+
+$bodyGrey:#b3b3b3;
+$bgGrey:#414042;
+$gutterWidth:13px;
+
+$baseFont: 'Lato', sans-serif;
+$baseheadingFont: 'Lato', sans-serif;
+$baselineHeight: 27px;
+$baseheadingFontWeight: 300;
+$baseheadingFontColor: $white;
+
+$navMenuColor: #333;
+$navMenuSubColor: #666;
+$navMenuBody: #b3b3b3;
+
+//device widths
+
+$mobile:320px;
+$modile-landscape:600px;
+$ipad: 768px;
+$ipad-landscape: 1024px;
+$desktop: 960px;
+$desktop-wide:992px;
+
+
+//border colors
+$borderColor:#898889;
+$grey:#7f7f7f;
+$navBorder:#706f71;
+// grad colors
+
+$buttonGradStart: #7b7676;
+$buttonGradEnd: #343434;
+
+$radioGradStart: #fff;
+$radioGradEnd: #b9b9b9;
+
+$radioCheckedStart: #770e1b;
+$radioCheckedEnd: $autoGlymColor;
+
+
+$panelStart:#9b9b9b;
+$panelEnd:#676767;
+
+$expanderStart:#aaaaaa;
+$expanderEnd:#494949;
+
+/* buttons */
+$buttonBorderWidth: 1px;
+$buttonBorderStyle: solid;
+$buttonBorderColor: #858585;
+$buttonTopBorderColor: #c3c3c3;
+$buttonBottomBorderColor: #7a797a;
+
+$buttonColor:#fff;
+$buttonBackground: #858585;
+
+/* Widgets */
+$priceColor: #cccccb;
+
+/* grid Vars */
+
+$total-columns  : 16;             // a 12-column grid
+$column-width   : 6em;            // each column is 4em wide
+$gutter-width   : 1.3em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;

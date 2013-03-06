@@ -1,0 +1,29 @@
+
+
+/* Logos ------------------ */
+.logo--autoglym {
+	width:40px;
+	height:40px;
+  	background: image-url('logo-small.png');
+  	@include hide-text(left);
+  	float:left;
+}
+
+.logos--royal {
+	width:183px;
+	height:83px;
+  	background: image-url('royal-logos.png');
+	margin-bottom:$baselineHeight;
+
+	span {
+		display: inline-block;
+		position: absolute;
+		@include hide-text(left);
+	}
+
+  	.svg & {
+	 	background: image-url('royal-logos.svg');
+	}
+
+}
+

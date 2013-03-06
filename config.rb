@@ -47,7 +47,7 @@
 #   end
 # end
 
-set :css_dir, 'css'
+set :css_dir, 'scss'
 
 set :js_dir, 'js'
 
@@ -78,5 +78,5 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
-
-page "templates/styleguide.html", :layout => "layout"
+page "homepage.html", :layout => "layout"
+page "styleguide.html", :layout => "layout-inner"

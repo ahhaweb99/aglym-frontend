@@ -1,0 +1,73 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Elements =================================================== */
+
+// FIGURES & IMAGES =============================================================================
+
+hr {
+display : block;
+margin : $baselineHeight 0;
+padding : 0;
+height : 1px;
+border : 0;
+
+background:image-url('bg-dotted-line-grey.png') repeat-x;
+border:0px solid transparent;
+.svg & {
+	background:image-url('bg-dotted-line-grey.svg') repeat-x;
+}
+
+
+}
+
+// img
+
+img {
+max-width : 100%;
+border-width : 0;
+vertical-align : middle;
+-ms-interpolation-mode : bicubic; }
+
+svg:not(:root) {
+overflow : hidden; }
+
+// figure
+
+figure {
+margin-bottom : $baselineHeight;
+
+img {
+margin-bottom : $baselineHeight / 4; }
+
+figcaption {
+display : block;
+font-weight : normal;
+@include font-size(14);
+//color : $grey;
+}
+}
+
+// list-bordered
+
+.list-bordered {
+list-style-type : none;
+margin : 0 0 $baselineHeight 0;
+padding : 0;
+
+li {
+margin-bottom : $baselineHeight / 4;
+padding-bottom : $baselineHeight / 4;
+border-bottom : 1px dashed $borderColor; }
+
+li:last-child {
+margin-bottom : 0;
+padding-bottom : 0;
+border-bottom-width : 0; }
+}

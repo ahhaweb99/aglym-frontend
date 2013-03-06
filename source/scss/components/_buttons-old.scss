@@ -1,0 +1,416 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Buttons =================================================== */
+
+.button {
+  display: inline-block;
+  @include font-size(16);
+  color:$white;
+  font-family: 'Helevtica Neue', 'Helvetica', 'Arial', sans-serif;
+  text-decoration: none;
+  font-weight: 800;
+  padding:12px 20px 18px;
+  position: relative;
+  overflow: visible;
+  background:url(#{$imgPath}btn-bg.png) repeat-x;
+  min-width:64px;
+  text-align: center;
+
+    &:before {
+      content:'';
+      background:url(#{$imgPath}btn-bg-left.png) no-repeat;
+      display: block;
+      width: 10px;
+      height: 43px;
+      position:absolute;
+      left:-10px;
+      top:0;
+    }
+
+    &:after {
+      content:'';
+      background:url(#{$imgPath}btn-bg-right.png) no-repeat;
+      display: block;
+      width: 25px;
+      height: 43px;
+      position:absolute;
+      right:-25px;
+      top:0;
+    }
+  
+  &.next-btn {
+    background:url(#{$imgPath}button-bg.png) repeat-x;
+    padding:7px 0 18px;
+
+    &:before {
+      content:'';
+      background:url(#{$imgPath}button-bg-left.png) no-repeat;
+      display: block;
+      width: 10px;
+      height: 43px;
+      position:absolute;
+      left:-10px;
+      top:0;
+    }
+
+    &:after {
+      content:'';
+      background:url(#{$imgPath}button-bg-right-next.png) no-repeat;
+      display: block;
+      width: 25px;
+      height: 43px;
+      position:absolute;
+      right:-25px;
+      top:0;
+    }
+  }
+
+  &.prev-btn {
+    background:url(#{$imgPath}button-bg.png) repeat-x;
+    padding:7px 0 18px;
+
+    &:before {
+      content:'';
+      background:url(#{$imgPath}button-bg-left-prev.png) no-repeat;
+      display: block;
+      width: 20px;
+      height: 43px;
+      position:absolute;
+      left:-20px;
+      top:0;
+    }
+
+    &:after {
+      content:'';
+      background:url(#{$imgPath}button-bg-right.png) no-repeat;
+      display: block;
+      width: 25px;
+      height: 43px;
+      position:absolute;
+      right:-25px;
+      top:0;
+    }
+  }
+}
+
+.submit-btn-wrapper {
+  background:url(#{$imgPath}btn-bg.png) repeat-x;
+  position: relative;
+  left:9px;
+  float:left;
+
+  .login & {
+    left:134px;
+  }
+
+
+  .submit-button {
+    background:none;
+    display: inline-block;
+    @include font-size(16);
+    color:$white;
+    font-family: 'Helevtica Neue', 'Helvetica', 'Arial', sans-serif;
+    text-decoration: none;
+    font-weight: 800;
+    padding:9px 20px 18px;
+    position: relative;
+
+  }
+    &:before {
+      content:'';
+      background:url(#{$imgPath}btn-bg-left.png) no-repeat;
+      display: block;
+      width: 10px;
+      height: 53px;
+      position:absolute;
+      left:-9px;
+      top:0;
+    }
+
+    &:after {
+      content:'';
+      background:url(#{$imgPath}btn-bg-right.png) no-repeat;
+      display: block;
+      width: 25px;
+      height: 53px;
+      position:absolute;
+      right:-25px;
+      top:0;
+    }
+}
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 6px 11px 6px;
+  margin-bottom: 0;
+  font: {
+    family: 'Helvetica', Arial, sans-serif;
+    weight: bold;
+  }
+
+
+
+  @include font-size(13);
+  line-height: $baselineHeight;
+  color: $white;
+  text-align: center;
+  vertical-align: middle;
+  @include background-image(linear-gradient($buttonGradStart, $buttonGradEnd));
+ 
+  @include border-radius(4px);
+  cursor: pointer;
+  *margin-left: .3em;
+
+  &:visited,
+  &:hover {
+    text-decoration: none;
+    @include background-image(linear-gradient($buttonGradEnd, $buttonGradStart));
+
+  }
+
+  &.main-btn {
+    @include font-size(14);
+    text-decoration: none;
+    padding-left:24px;
+    padding-right:24px;
+    //@include box-shadow($black 0 8px 6px -6px);
+    min-width: 50px;
+    border:1px solid #383838;
+
+    &.large {
+      @include font-size(18);
+       padding-left:34px;
+       padding-right:34px;
+       padding-bottom:9px;
+       padding-top:8px;
+       @include border-radius(8px);
+    }
+  }
+
+}
+
+input.btn {
+  margin:1px;
+  border:0;
+  padding:5px 28px 6px 20px;
+}
+
+.nav-button {
+  background:url(#{$imgPath}nav-bg-btn.png) repeat-x;
+  position:absolute;
+  top:0;
+  right:12px;
+  cursor:pointer;
+
+  @include font-size(16);
+  color:$white;
+  font-family: 'Helevtica Neue', 'Helvetica', 'Arial', sans-serif;
+  text-decoration: none;
+  font-weight: 800;
+  padding:14px 20px 18px;
+
+   &:before {
+      content:'';
+      background:url(#{$imgPath}nav-bg-btn-left.png) no-repeat;
+      display: block;
+      width: 42px;
+      height: 59px;
+      position:absolute;
+      left:-42px;
+      top:0;
+    }
+
+    &:after {
+      content:'';
+      background:url(#{$imgPath}nav-bg-btn-right.png) no-repeat;
+      display: block;
+      width: 25px;
+      height: 59px;
+      position:absolute;
+      right:-25px;
+      top:0;
+    }
+}
+
+
+.icon-next {
+  position:absolute;
+  top:9px;
+  right:10px;
+  pointer-events:none;
+
+}
+
+
+input[type="submit"].btn:hover {  }
+
+.btn:first-child { *margin-left: 0; }
+
+// disabled
+
+.btn-disabled {
+  @include opacity(.5);
+  cursor: default;
+}
+
+.btn-error {
+  //@include errorgrad;
+  border: {
+    color: darken(red, 15%);
+    bottom-color: darken(red, 20%);
+  }
+  color: $white;
+
+  &:visited,
+  &:hover { color: $white; }
+}
+
+// info
+
+.btn-info {
+  //@include infograd;
+  border: {
+    color: darken($black, 15%);
+    bottom-color: darken($black, 20%);
+  }
+  color: darken($black, 50%);
+
+  &:visited,
+  &:hover { color: darken($black, 50%); }
+}
+
+// inverse
+
+.btn-inverse {
+  //@include inversegrad;
+  border: {
+    //color: darken($inverscolor, 15%);
+    //bottom-color: darken($inverscolor, 20%);
+  }
+  color: $white;
+
+  &:visited,
+  &:hover { color: $white; }
+}
+
+// primary
+
+.btn-primary {
+ // @include basegrad;
+  border: {
+    color: darken($bodyColor, 15%);
+    bottom-color: darken($bodyColor, 20%);
+  }
+  color: $white;
+
+  &:visited,
+  &:hover { color: $white; }
+}
+
+// success
+
+.btn-success {
+ // @include successgrad;
+  border: {
+    //color: darken($successcolor, 15%);
+    //bottom-color: darken($successcolor, 20%);
+  }
+}
+
+// warning
+
+.btn-warning {
+  //@include warninggrad;
+  border: {
+    //color: darken($warningcolor, 15%);
+    //bottom-color: darken($warningcolor, 20%);
+  }
+}
+
+// sizes
+
+.btn-extlarge {
+  padding: 11px 22px;
+  @include font-size(21);
+  @include border-radius(4px);
+}
+
+.btn.btn-large {
+  *padding: {
+    top: 7px;
+    bottom: 7px;
+  }
+}
+
+.btn-large {
+  padding: 11px 22px;
+  @include font-size(14);
+  line-height: normal;
+  @include border-radius(4px);
+}
+
+.btn-small {
+  padding: 6px 10px;
+  @include font-size(11);
+  line-height: 16px;
+}
+
+.btn-mini {
+  padding: 3px 5px;
+  @include font-size(11);
+  line-height: 14px;
+}
+
+.btn-group {
+  position: relative;
+  *zoom: 1;
+  *margin-left: .3em;
+  margin-bottom: $baselineHeight;
+
+  .btn {
+    position: relative;
+    float: left;
+    margin-left: -1px;
+    @include border-radius(0);
+
+    &:first-child {
+      margin-left: 0;
+      @include border-left-radius(2px);
+    }
+
+    &:last-child { @include border-right-radius(2px); }
+
+    &.large {
+      &:first-child {
+        margin-left: 0;
+        @include border-left-radius(4px);
+      }
+
+      &:last-child { @include border-right-radius(4px); }
+    }
+  }
+}
+
+.btn-toolbar {
+  clear: both;
+  margin: {
+    top: $baselineHeight / 2;
+    bottom: $baselineHeight / 2;
+  }
+
+  .btn-group {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+}

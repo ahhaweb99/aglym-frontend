@@ -1,0 +1,297 @@
+//_structure =================== //
+.structure--content {
+	@include rem('width', 960px);
+	padding:0;
+}
+
+.header {
+	padding:0;
+}
+
+.header--wrapper {
+	.title--strap {
+		display:inline-block;
+	}
+}
+
+.breadcrumb--wrapper {
+	@include rem('margin-bottom', 71px);
+}
+
+//_page ======================== //
+
+.logo--autoglym {
+	float:none;
+}
+
+/*logos */
+.logos--royal {
+	@include rem('margin-right', 49px);
+	img {
+		width:183px;
+		height:83px;
+	}
+	&.desktop  {
+		display: inline-block;
+
+		.lt-ie8 & {
+			display: inline;
+			zoom:1;
+		}
+	}
+}
+
+/* Navigation ====*/
+
+.nav--top {
+	&.desktop  {
+		display: inline-block;
+	}
+
+	.lt-ie8 & {
+		display: inline;
+		zoom:1;
+		float:none;
+	}
+}
+
+.nav--site {
+	letter-spacing:2px;
+	a {
+		@include rem('padding',0 11px);
+		&.home {
+			display: inline-block;
+		}
+	}
+}
+
+//* Headers =================== //
+
+.title--strap {
+	@include rem('margin-top',48px);
+	@include rem('margin-right',28px);
+
+	display:inline-block;
+	float:none;
+
+	.lt-ie8 & {
+		display: inline;
+
+	}
+}
+
+// _footer ===================== //
+
+.footer {
+	.grid--one {
+		width:67%		
+	}
+	.grid--two {
+		width:32%;
+		float:right;
+		text-align:right;
+		.lt-ie8 & {
+			float:none;
+			vertical-align: top;
+		}
+	
+		.header--footer {
+			margin-top:8px;
+			margin-right:10px;
+
+			.lt-ie8 & {
+				display: inline;
+				zoom:1;
+				margin-right: 90px;
+			}
+		}
+
+
+	}
+
+	hr {
+		background:none;
+		border-bottom: 1px solid;
+	}
+
+	.title--strap {
+		@include font-size(12);
+
+		.lt-ie8 & {
+			@include rem('margin-top', -24px);
+		}
+	}
+}
+
+.social-icons {
+	text-align:right;
+	margin-top: -5px;
+	
+	.lt-ie8 & {
+		display: inline;
+		zoom:1;
+	}
+	
+	li {
+		vertical-align:middle;
+		display: inline-block;
+
+		@include rem('width', 28px);
+		@include rem('height', 32px);
+		
+		.lt-ie8 & {
+			display: inline;
+			zoom:1;
+		}
+
+		background: image-url('bg-social-icons-small.png') no-repeat;
+
+		.svg & {
+			background: image-url('bg-social-icons-small.svg') no-repeat;
+		}
+
+		&.fb {
+			background-position:0 0;
+
+		}
+
+		&.twitter {
+			background-position:-30px 0;
+			@include rem('margin', 0 0 0 0);
+
+		}
+
+		&.yt {
+			background-position:-60px 0;
+		}
+	}
+}
+
+.sign-up {
+
+	label {
+		width:31.58%;
+		display:inline-block;
+
+
+	}
+	input[type="text"] {
+		width:32.22%;
+		margin-right:3px;
+
+		.lt-ie8 & {
+			width:38%;
+			position:relative;
+			top:8px;
+		}
+	}
+	
+	input[type="submit"] {
+		width:12.41%;
+	}
+
+}
+
+.address--details {
+	width:59%;
+	display:inline-block;
+	vertical-align: top;
+	.lt-ie8 & {
+		display: inline;
+		zoom:1;
+	}
+}
+
+
+
+.footer-links {
+
+	text-align:left;
+
+	li {
+		@include rem('margin', 0 20px 0 0); 
+		
+	}
+}
+
+.footer {
+	.logo--wrapper {
+		@include rem('margin-top',20px);
+
+		.lt-ie8 & {
+			display: inline;
+			zoom:1;
+		}
+	}
+
+	.logos--royal {
+		display: none;
+	}
+
+	.logo--made-in-gb {
+		@include rem('margin-top',0px);
+		
+		.lt-ie8 & {
+			float:left;
+			display: inline;
+			zoom:1;
+		}
+	}
+
+	.logos {
+		width:40%;
+		display:inline-block;
+		vertical-align: top;
+
+		.lt-ie8 & {
+			display: inline;
+			zoom:1;
+		}
+
+	}
+}
+
+
+//* _widgets ========== //
+
+.widget {
+	text-align:left;
+	.product {
+		img {
+			float:left;
+			margin-right:20px;
+			display: inline-block;
+
+			.lt-ie8 & {
+				display: inline;
+				float:none;
+				zoom:1;
+				vertical-align: top;
+			}
+		}
+
+		h3 {
+			width: 55%;
+			.lt-ie8 & {
+				width:53%;
+				display: inline;
+				float:none;
+				zoom:1;
+				vertical-align: top;
+			}
+		}
+	}
+}
+.sub-title-and-nav {
+	width:60%;
+
+}
+// show/hide for media widths content ========== //
+
+.desktop {
+	display:block;
+}
+
+.max-desktop {
+	display:none !important;
+}

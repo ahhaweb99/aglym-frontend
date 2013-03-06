@@ -1,0 +1,28 @@
+.bg--grey {
+	background:$bgGrey;
+}
+
+.grad--grey {
+	 $experimental-support-for-svg:true;
+	 @include background-image(linear-gradient(#fafafa, #d2d2d2));
+	 @include background(linear-gradient(#fafafa, #d2d2d2));
+}
+
+@mixin greygrad { 
+	$experimental-support-for-svg: true; 
+	@include background-image(linear-gradient(#9e9e9d, #706f70));
+	@include background(linear-gradient(#9e9e9d, #706f70));
+
+}
+@mixin greygrad-inverted {
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(#706f70, #9e9e9d));
+	@include background(linear-gradient(#706f70, #9e9e9d));
+
+}
+@mixin widgetgrad { 
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(#000, #4d4d4d));
+	 @include background(linear-gradient(#000, #4d4d4d));
+
+}

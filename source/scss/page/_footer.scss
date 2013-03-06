@@ -1,0 +1,117 @@
+.footer {
+	p {
+		color:$bodyGrey;
+		@include rem('line-height', $baselineHeight/1.2);
+		@include font-size(12);
+		@include rem('margin-bottom', $baselineHeight/2);
+	}
+	
+	.grid--one {
+		
+	}
+	
+	.logo--autoglym {
+		float:right;
+		
+	}
+
+	.title--strap {
+		float:none;
+		@include rem('margin-top', 17px);
+		@include rem('margin-right', 10px);
+	}
+
+	.logo--wrapper {
+		vertical-align: middle;
+		float:right;
+		display: none;
+		@include rem('margin-top', 41px);
+	}
+
+	.logos--royal {
+		display:none;
+	}
+
+	.logo--made-in-gb {
+		display: none;
+	}
+}
+
+.footer-links {
+	@include rem('margin-bottom', $baselineHeight/2);
+	@include rem('line-height', 32px);
+	li {
+		text-transform: uppercase;
+		@include font-size(13);
+		a {
+			color:$bodyGrey;
+			
+			&:hover {
+				
+				.no-touch & {
+					color:$bodyColor;
+					border-bottom: 1px solid $bodyColor;
+				}
+				
+			}
+
+		}
+
+	}
+}
+
+.sign-up {
+
+	label {
+		@include rem('margin-bottom', $baselineHeight/2);
+
+	}
+	input[type="text"] {
+		width:77%;
+		margin-right:3px;
+	}
+	
+	input[type="submit"] {
+		width:20%;
+	}
+}
+
+.social-icons {
+	width:100%;
+	margin:0 auto;
+	text-align:center;
+	padding:0;
+	li {
+		display: inline-block;
+		@include rem('width', 75px);
+		@include rem('height', 65px);
+		@include hide-text(left);
+		background: image-url('bg-social-icons.png') no-repeat;
+
+		.svg & {
+			background: image-url('bg-social-icons.svg') no-repeat;
+		}
+
+		&.fb {
+			background-position:20px 0;
+
+		}
+
+		&.twitter {
+			background-position:-74px 0;
+			@include rem('margin', 0 22px 0 15px);
+
+		}
+
+		&.yt {
+			background-position:-172px 0;
+		}
+	}
+
+	a {
+		display: block;
+		width:100%;
+		height:100%;
+	}
+}
+

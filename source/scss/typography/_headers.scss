@@ -1,0 +1,132 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: $baseheadingFont;
+  font-weight: $baseheadingFontWeight;
+  color: $baseheadingFontColor;
+  text-rendering: optimizelegibility;
+  clear:both;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  #body_content a:hover & {
+    color: $bodyColor !important;
+  }
+}
+
+
+
+#{headings()} {
+margin : 0;
+font-family : $baseheadingFont;
+font-weight : $baseheadingFontWeight;
+color : $baseheadingFontColor;
+text-rendering : optimizelegibility; }
+
+h1 small,
+h2 small {
+font-weight : normal;
+color : $bodyLight; }
+
+h1,
+.h1 {
+margin-bottom : $baselineHeight / 2;
+@include font-size(32);
+line-height : 1.2;
+padding-bottom: $baselineHeight/2;
+}
+
+h2,
+.h2 {
+margin-bottom : $baselineHeight / 2;
+@include font-size(24);
+line-height : 1.2; }
+
+h3,
+.h3 {
+margin-bottom : $baselineHeight / 2;
+@include font-size(20);
+line-height : 1.3;
+}
+
+h4,
+.h4 {
+margin-bottom : $baselineHeight / 2;
+@include font-size(18);
+line-height : 1.5;
+text-transform:none;
+font-weight : normal;
+}
+
+h5,
+.h5 {
+@include font-size(16);
+margin-bottom : $baselineHeight / 2;
+line-height : 1.5;
+font-weight : normal;
+text-transform:none;
+}
+
+h6,
+.h6 {
+margin-bottom : $baselineHeight / 2;
+@include font-size(14);
+font-weight : normal;
+letter-spacing : 1px;
+text-transform : none;
+line-height : 1.5; }
+
+.header-underlined {
+  border-bottom: 1px solid lighten($bodyColor, 40%);
+  padding-bottom: $baselineHeight/2;
+
+}
+
+.section--title {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 1.5332em !important;
+  float:left;
+  border-bottom:1px solid $white;
+}
+
+.header--section-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  @include font-size(20);
+  line-height: 34px;
+  display:inline-block;
+  margin-right: 7.7%;
+  .lt-ie8 & {
+    display: inline;
+    zoom:1;
+  }
+
+}
+
+.title--page {
+  border-bottom:1px solid $white;
+}
+
+.title--strap {
+  @include font-size(13);
+  font-weight:400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top:28px;
+  margin-bottom: 0;
+  float:right;
+}
+
+.header--footer {
+  @include font-size(16);
+  font-weight: normal;
+  letter-spacing: 1px;
+  color:$white;
+}

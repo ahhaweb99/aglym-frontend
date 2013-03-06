@@ -1,0 +1,283 @@
+/* Navigation ---------  */
+
+.nav--site {
+	text-transform:uppercase;
+	@include font-size(14);
+	letter-spacing:2px;
+	text-align:center;
+	height:0;
+	display:block;
+	overflow:hidden;
+	@include transition-property(height);
+  	@include transition-duration(.5s);
+
+	&.on {
+		height:auto;
+		@include transition-property(height);
+  		@include transition-duration(.5s);
+	}
+	
+	a {
+		border-bottom: 0px solid;
+		color:$bodyGrey;
+		display:block;
+		text-align:right;
+		@include font-size(18);
+		background:image-url('bg-dotted-line.png') repeat-x bottom;
+		@include rem('margin-top', 10px);
+		@include rem('padding-bottom', 10px);
+		
+		.svg & {
+			background:image-url('bg-dotted-line.svg') repeat-x bottom;
+		}
+		
+		&:last-child {
+			background:none;
+		}
+
+		&:hover {
+			.no-touch & {
+				color:$white;
+			}
+		}
+
+	}
+}
+
+.nav--top {
+	a {
+		color:$bodyGrey;
+		text-transform: uppercase;
+		display: none;
+		
+		&:hover {
+			.no-touch & {
+				color:$white;
+
+			}
+		}
+
+		&.basket {
+			background:image-url('icon-basket.png') 13px 0 no-repeat;
+			
+			.svg & {
+				background:image-url('icon-basket.svg') 13px no-repeat;
+			}
+		}
+	}
+}
+
+.search-field {
+	background:$bgGrey;
+	
+	@include box-sizing(border-box);
+	height:0;
+	overflow:hidden;
+	@include transition-property(all);
+  	@include transition-duration(.5s);
+	@include rem('padding', 0px);
+	
+
+	&.on {
+		@include rem('height', 58px);
+		@include rem('padding', 12px 0 10px);
+		@include transition-property(all);
+  		@include transition-duration(.5s);
+	}
+	
+	input[type="text"] {
+		border:0;
+	}
+
+	input[type="submit"] {
+		display:none;
+	}
+}
+
+.nav--language {
+}
+
+.mobile--nav-icons {
+	@include rem('height', 39px);
+	@include rem('border-bottom-width', 2px);
+	border-bottom-style:solid;
+	border-bottom-color:$borderColor;
+	width:100%;
+	overflow:hidden;
+
+	.icons {
+		float:right;
+		display: inline-block;
+		vertical-align: top;
+		@include rem('padding-right', $gutterWidth);
+	}
+	
+	a {
+		display: inline-block;
+		vertical-align: top;
+		@include rem('width', 39px);
+		@include rem('height', 39px);
+		
+		&.search {
+			background:image-url('icons-mobile-nav.png') 6px center no-repeat;
+
+			.svg & {
+				background:image-url('icons-mobile-nav.svg') 6px center no-repeat;
+			}
+		}
+
+		&.nav {
+			background:image-url('icons-mobile-nav.png') -33px center no-repeat;
+
+			.svg & {
+				background:image-url('icons-mobile-nav.svg') -33px center no-repeat;
+
+			}
+		}
+
+		&.language {
+			background:image-url('icons-mobile-nav.png') -74px center no-repeat;
+
+			.svg & {
+				background:image-url('icons-mobile-nav.svg') -74px center no-repeat;
+			}
+		}
+
+		&.basket {
+			background:image-url('icons-mobile-nav.png') -117px center no-repeat;
+
+			.svg & {
+				background:image-url('icons-mobile-nav.svg') -117px center no-repeat;
+
+			}
+		}
+	}
+}
+
+.sub-title-and-nav {
+	position:relative;
+	
+	nav {
+		@include rem('padding', .1px $gutterWidth);
+		@include rem('margin-bottom', $baselineHeight);
+		text-transform: uppercase;
+		text-align:right;
+		@include rem('height', 0px);
+		overflow: hidden;
+		@include transition-property(height);
+  		@include transition-duration(.5s);
+
+		&.on {
+			height:auto;
+			@include transition-property(height);
+  			@include transition-duration(.5s);
+		}
+
+		.selected > a {
+			color:$white;
+		}
+
+		ul {
+			@include rem('margin-bottom', 0px);
+			@include rem('line-height', 27px);
+		}
+		
+		> ul > li a {
+			border-bottom: 0px solid;
+			color:$bodyGrey;
+			display:block;
+			@include font-size(18);
+			background:image-url('bg-dotted-line.png') repeat-x bottom;
+			@include rem('margin-top', 10px);
+			@include rem('padding-bottom', 10px);
+			
+			.svg & {
+				background:image-url('bg-dotted-line.svg') repeat-x bottom;
+			}
+			
+			
+		}
+		
+		> ul > li {
+			ul li a {
+					@include rem('margin-top', 5px);
+					@include rem('padding-bottom', 5px);
+				background: none;
+				
+				.svg & {
+					background:none;
+				}
+			}
+
+			ul li:last-child a {
+				background:image-url('bg-dotted-line.png') repeat-x bottom;
+				.svg & {
+					background:image-url('bg-dotted-line.svg') repeat-x bottom;
+				}
+			}
+
+			&:last-child {
+				a {
+					background:none;
+				}
+			}
+		}
+
+		> ul ul {
+			padding:0;
+		}
+	}
+}
+
+.icon--basket {
+	@include rem('width', 17px);
+	@include rem('height', 15px);
+	display:inline-block;
+
+	background:image-url('icon-basket.png') no-repeat;
+
+	.svg & {
+		background:image-url('icon-basket.svg') no-repeat;
+	}
+}
+
+.icon--sub-nav {
+	display: inline-block;
+	vertical-align: top;
+	@include rem('width', 39px);
+	@include rem('height', 39px);
+	@include hide-text(left);
+	background:image-url('icons-mobile-nav.png') -33px center no-repeat;
+	position:absolute;
+	top:0;
+	right:0;
+
+	.svg & {
+		background:image-url('icons-mobile-nav.svg') -33px center no-repeat;
+	}
+		
+}
+
+.header--section-title {
+	border-bottom: 2px solid $borderColor;
+
+	width:100%;
+	@include rem('padding-bottom', 6px);
+	@include rem('margin-bottom', 0px);
+}	
+
+
+.nav--breadcrumb {
+	i {
+		line-height: 1;
+		@include rem('margin-left', 12px); 
+	}
+
+	a {
+		color: $navMenuBody; 
+
+		&:hover {
+			color:$white;
+		}
+	}
+}

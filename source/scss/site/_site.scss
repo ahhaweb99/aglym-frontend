@@ -1,0 +1,76 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Page =================================================== */
+
+// 1. ROOT 					==============================
+
+html {
+background : $bgColor;
+font-size : 62.5%;
+-webkit-overflow-scrolling : touch;
+-webkit-tap-highlight-color : none;
+-webkit-text-size-adjust : 100%;
+-ms-text-size-adjust : 100%; }
+
+body {
+margin : 0;
+padding : 0;
+width : 100%;
+background-color : transparent;
+font-family : $baseFont;
+@include font-size(13);
+@include rem('line-height', $baselineHeight); 
+color : $bodyColor;
+-webkit-backface-visibility: hidden;}
+
+
+// 2. TYPOGRAPHY 			==============================
+a {
+	color:  $bodyColor;
+	//border-bottom:1px solid $bodyColor;
+	text-decoration:none;
+
+	&:hover {
+		//border-bottom:1px solid transparent;
+		color:$white;
+	}
+}
+
+#cms--content {
+	ul {
+		margin-top:$baselineHeight;
+		li {
+			background: image-url('bg-bullets.png') left 9px no-repeat;
+			padding-left:$gutterWidth;
+
+			.svg & {
+				background: image-url('bg-bullets.svg') left 9px no-repeat;
+			}
+			
+		}
+	}
+
+	ol {
+		list-style: decimal;
+		@include rem('margin-left', 16px);
+		 li {
+
+		 }
+	}
+}
+
+
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+// 5. ELEMENTS 				==============================
+// 6. LAYOUT 				==============================
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================

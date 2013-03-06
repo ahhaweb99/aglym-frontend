@@ -1,0 +1,34 @@
+
+
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('#{$fontPath}Lato-Reg-webfont.eot');
+    src: url('#{$fontPath}Lato-Reg-webfont.svg#LatoRegular') format('svg');
+    	 // url('#{$fontPath}Lato-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+      //    url('#{$fontPath}Lato-Reg-webfont.woff') format('woff'),
+      //    url('#{$fontPath}Lato-Reg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LatoBold';
+    src: url('#{$fontPath}Lato-Bol-webfont.eot');
+    src: url('#{$fontPath}Lato-Bol-webfont.svg#LatoBold') format('svg');
+    	 // url('#{$fontPath}Lato-Bol-webfont.eot?#iefix') format('embedded-opentype'),
+      //    url('#{$fontPath}Lato-Bol-webfont.woff') format('woff'),
+      //    url('#{$fontPath}Lato-Bol-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LatoBlack';
+    src: url('#{$fontPath}Lato-Bla-webfont.eot');
+    src: url('#{$fontPath}Lato-Bla-webfont.svg#LatoBlack') format('svg');
+         // url('#{$fontPath}Lato-Bla-webfont.eot?#iefix') format('embedded-opentype'),
+         // url('#{$fontPath}Lato-Bla-webfont.woff') format('woff'),
+         // url('#{$fontPath}Lato-Bla-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
