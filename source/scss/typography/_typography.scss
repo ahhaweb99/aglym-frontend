@@ -58,13 +58,13 @@ margin : 0;
 blockquote  {
 margin : 0 0 $baselineHeight 0;
 padding-left : $gutterWidth;
-border-left : 2px solid $borderColor;
+border-left : 2px solid $autoGlymColor;
 //font-family : $altfont;
 font-style : normal; 
-
 p {
 	font-style:italic;
 	@include font-size(17);
+	color:$autoGlymColor;
 }
 }
 
@@ -88,7 +88,7 @@ dd {
 margin-bottom : $baselineHeight;  }
 
 dt {
-font-weight : bold; }
+font-weight : 800; }
 
 .dl-horizontal {
 
@@ -109,7 +109,7 @@ border-bottom : 1px dotted $borderColor;
 cursor : help; }
 
 b, strong {
-font-weight : bold; }
+font-weight : 700; }
 
 dfn {
 font-style : italic; }

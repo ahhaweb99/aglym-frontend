@@ -80,3 +80,4 @@ configure :build do
 end
 page "homepage.html", :layout => "layout"
 page "styleguide.html", :layout => "layout-inner"
+page "product-thumbs.html", :layout => "layout-inner-no-nav"

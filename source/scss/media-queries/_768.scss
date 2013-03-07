@@ -204,6 +204,14 @@
 		.selected {
 			background:image-url('bg-nav-selected.png') no-repeat center bottom;
 		}
+		
+		&.has-no-subsections {
+			>
+			ul {
+				display: none;
+			}
+			
+		}
 
 		> ul > li a {
 			@include font-size(13);
@@ -263,11 +271,10 @@
 }
 
 .nav--sub-nav {
-	@include rem('padding', 53px $gutterWidth);
+	@include rem('padding', 20px $gutterWidth 53px);
 	> ul {
-			@include rem('padding-top', 22px);
-			border-top:1px solid $navBorder;
-			text-transform: uppercase;
+			@include rem('padding-top', 2px);
+			//border-top:1px solid $navBorder;
 			
 			li {
 				background:image-url('bg-arrow-right.png') 0 4px no-repeat;
@@ -280,13 +287,43 @@
 				&:hover {
 					.no-touch & {
 						background-position:-250px 4px;
+					}
+				}
+				
+				ul {
+					li {
+						.svg & {
+							background:none;
+						}
 
-						a {
-							color:$white;
+						&.selected {
+							background:image-url('bg-arrow-right.png') -250px 4px no-repeat;
+
+							.svg & {
+								background:image-url('bg-arrow-right.svg') -250px 4px no-repeat;
+							}
 						}
 					}
 				}
+
+				&.selected {
+					background:image-url('bg-arrow-down.png') 0 7px no-repeat;
+
+					.svg & {
+						background:image-url('bg-arrow-down.svg') 0 7px no-repeat;
+					}
+
+					> a {
+						color:$white;
+					}
+
+					> ul {
+						@include rem('margin-left', 0px); 
+					}
+				}
 			}
+
+			
 		
 			ul {
 				margin-left: $gutterWidth;
@@ -295,7 +332,10 @@
 
 	a {
 		color:$bodyGrey;
-
+		
+			&:hover {
+				color:$white;
+			}
 
 	}
 }
@@ -361,6 +401,29 @@
 		}
 
 	}
+}
+
+// _products ================== //
+.product-item {
+		border:0;
+
+	.product-image {
+		float:left;
+	}
+
+	.product-info {
+		@include rem('margin-top', $baselineHeight/2);
+		@include rem('padding-top', $baselineHeight);
+		width:70%;
+		border-top:1px solid $white;
+		border-bottom:1px solid $white;
+	}
+
+	.button-wrapper {
+		width:70%;
+		float:right;
+	}
+
 }
 
 // _element =================== //
@@ -468,6 +531,8 @@
 		float:none;
 	}
 }
+
+
 
 // show/hide for media widths content ========== //
 

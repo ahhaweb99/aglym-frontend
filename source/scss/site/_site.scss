@@ -43,28 +43,7 @@ a {
 	}
 }
 
-#cms--content {
-	ul {
-		margin-top:$baselineHeight;
-		li {
-			background: image-url('bg-bullets.png') left 9px no-repeat;
-			padding-left:$gutterWidth;
 
-			.svg & {
-				background: image-url('bg-bullets.svg') left 9px no-repeat;
-			}
-			
-		}
-	}
-
-	ol {
-		list-style: decimal;
-		@include rem('margin-left', 16px);
-		 li {
-
-		 }
-	}
-}
 
 
 // 3. COLOUR 				==============================

@@ -1,0 +1,62 @@
+#cms--content,
+#normal--content {
+	ul {
+		@include rem('margin-top', $baselineHeight);
+		li {
+			text-align: left;
+			background: image-url('bg-bullets.png') left 9px no-repeat;
+			padding-left:$gutterWidth;
+
+			.svg & {
+				background: image-url('bg-bullets.svg') left 9px no-repeat;
+			}
+			
+		}
+	}
+
+	ol {
+		list-style: decimal;
+		@include rem('margin-left', 16px);
+		 li {
+			text-align: left;
+
+		 }
+	}
+	
+	a {
+		border-bottom: 1px solid $white;
+
+		&:hover {
+			border-bottom:1px solid transparent;
+		}
+	}
+	
+	h1 {
+		@include font-size(20);
+		@extend .title--page;
+		@include rem('margin-top', 21px);
+	}
+
+	.large-para {
+		@include font-size(20);
+		@include rem('line-height', $baselineHeight);
+		font-weight: 300;
+	}
+
+	img {
+		@include rem('margin-top', $baselineHeight/2);
+		@include rem('margin-bottom', $baselineHeight);
+		width:100%;
+		height: auto;
+	}
+	
+}
+
+#normal--content {
+	ul {
+		li {
+			list-style: none;
+			background: none;
+		}
+	}
+}

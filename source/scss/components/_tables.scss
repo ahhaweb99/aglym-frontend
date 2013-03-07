@@ -9,19 +9,19 @@
 
 /* Tables =================================================== */
 
-table {
+table, caption {
 width : 100%;
 max-width : 100%;
 margin-bottom : $baselineHeight;
 border-collapse : collapse;
 border-spacing : 0;
-//background-color : $tablebackground;
+background-color : $grey;
 
 th,
 td {
-padding : 8px;
+padding : $baselineHeight/2;
 vertical-align : top;
-//border-top : $tableborderwidth $tableborderstyle $tableborder;
+border-top : $tableborderwidth $tableborderstyle $bodyGrey;
 @include font-size(14);
 line-height : $baselineHeight;
 text-align : left; }
@@ -90,5 +90,11 @@ tbody tr:nth-child(odd) th {
 	}
 }
 
-
+caption {
+	margin:0;
+	padding:$baselineHeight/2;
+	width:auto;
+	@include font-size(20);
+	text-transform:uppercase;
+}
 

@@ -14,7 +14,7 @@
 // **Also Note:** this file must be delivered with a mime-type of:
 //
 //    text/x-component
-$pie-behavior: url("../css/PIE.htc");
+$pie-behavior: url("../scss/PIE.htc");
 
 // It is suggested that you use Sass's @extend directive to apply the PIE
 // behavior to your elements. Setting this variable will tell the `pie` mixin
@@ -58,12 +58,12 @@ $pie-base-class: pie-element;
 }
 
 // This is just a simple example of how to use the z-index approach.
-.widget {
-  @extend .pie-container;
-  h3 {
-    @include pie(z-pie-element); // This will extend .z-pie-element instead of .pie-element
-  }
-}
+// .widget {
+//   @extend .pie-container;
+//   h3 {
+//     @include pie(z-pie-element); // This will extend .z-pie-element instead of .pie-element
+//   }
+// }
 
 
 // Lastly, you can just include the pie-element mixin directly if you need to do a one-off:

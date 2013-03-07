@@ -114,6 +114,14 @@ line-height : 1.5; }
   border-bottom:1px solid $white;
 }
 
+.title--sub-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-bottom:1px solid $white;
+  @include rem('padding-bottom', 13px);
+}
+
 .title--strap {
   @include font-size(13);
   font-weight:400;

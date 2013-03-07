@@ -1,7 +1,14 @@
 .widget {
 	border:1px solid $borderColor;
+	margin-left: 1px;
+	@include rem('margin-bottom', $baselineHeight);
+	@extend #cms--content;
+	position:static;
+	z-index:1;
 	.widget-content {
 		@include rem('padding', 28px 22px);
+		@include widgetgrad;
+		
 	}
 
 	h2 {
@@ -10,9 +17,9 @@
 		font-weight: normal;
 		@include rem('margin-bottom', $baselineHeight);
 		@include rem('line-height', $baselineHeight);
+
 	}
 
-	@include widgetgrad;
 
 	.product {
 
@@ -20,11 +27,13 @@
 			float:left;
 			@include rem('margin-right', 20px);
 			@include inline-block;
+			width:auto;
 		}
 
 		h3 {
 			@include inline-block;
-			width: 55%;
+			width: 72%;
+			@include rem('margin-top', 10px);
 			@include font-size(16);
 			font-weight: 700;
 			text-transform: none;
@@ -34,10 +43,16 @@
 		.price {
 			color:$priceColor;
 		}
+
+		.btn {
+			float:none;
+			clear:left;
+		}
 	}
 
 	.btn {
 		@include rem('padding', 0 10px);
-		float:right;
 	}
+
+
 }

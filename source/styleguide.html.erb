@@ -7,8 +7,16 @@ title: Autoglym Styleguide
 <section class="structure--mainarea structure--content inline-list  clearfix">
 	<section class="structure--side-column">
 		<nav class="nav--sub-nav bg--grey">
+			<h3 class="title--sub-title">Sub title</h3>
             <ul>
-                <li><a href="#" title="sub section">sub section</a></li>
+                <li class="selected"><a href="#" title="sub section">Sub section</a>
+					<ul>
+		                <li class="selected"><a href="#" title="sub section">Sub sub section</a></li>
+		                <li><a href="#" title="sub section">Sub section</a></li>
+		                <li><a href="#" title="sub section">Sub section</a></li>
+	            	</ul> 
+                </li>
+                     
                 <li><a href="#" title="sub section">sub section</a></li>
                 <li><a href="#" title="sub section">sub section</a></li>
             </ul>               
@@ -16,18 +24,21 @@ title: Autoglym Styleguide
 	</section>
 	
 	<section id="cms--content" class="structure--main-column">
-			<h1 class="title--page">h1 style - Donec id elit non mi porta gravida at eget metus.</h1>
+			<h1>h1 style - Donec id elit non mi porta gravida at eget.</h1>
+			<p class="large-para">This paragraph has a style of 'large-para' applied. The company was founded in 1965 by a UK Motor Trade entrepreneur who developed a unique system for renovating used car paintwork. Today the name is synonymous with high quality car care and vehicle valeting products around the world.</p>
+			<p><a href="#">Donec id elit non mi porta</a> gravida at eget metus. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. <strong>Sed posuere consectetur</strong> est at lobortis.</p>
 			<h2>h2 style - Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam.</h2>
 			<h3>h3 style - Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam.</h3>
 			<h4>h4 style - Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam.</h4>
 			<h5>h5 style - This has a heavier weight as it is too small - Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam.</h5>
 			<h6>h6 style - This has a heavier weight as it is too small - Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam.</h6>
-			<p>Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.</p>
-			<p>Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+			<p><a href="#">Donec id elit non mi porta</a> gravida at eget metus. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. <strong>Sed posuere consectetur</strong> est at lobortis.</p>
+			<p><em>Italic styled text</em> est at lobortis. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+			<img src="img/placeholder-image.jpg" title="image description" alt="image description">
 			<p>Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 			<ul>
 				<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-				<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
+				<li>Vivamus sagittis lacus <a href="#">vel augue laoreet</a> rutrum faucibus dolor auctor.</li>
 				<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
 				<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
 				<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
@@ -39,25 +50,33 @@ title: Autoglym Styleguide
 				<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
 				<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
 			</ol>
+
 			<blockquote>
 				<p>This is a block quote - Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 			</blockquote>
+			<hr>
+			<a href="#" class="btn">This is a button</a>
+			<table><caption>This is a table style</caption>
+				<tbody>
+					<tr>
+						<td>Etiam Lorem Nibh</td>
+						<td>Etiam Lorem Nibh</td>
+					</tr>
+					<tr>
+						<td>Etiam Lorem Nibh</td>
+						<td>Etiam Lorem Nibh</td>
+					</tr>
+					<tr>
+						<td>Etiam Lorem Nibh</td>
+						<td>Etiam Lorem Nibh</td>
+					</tr>
+				</tbody>
+			</table>
 	</section>
 
 	<section class="structure--widget-holder">
-		<aside class="widget">
-			<div class="widget-content clearfix">
-				<h2>PRODUCT OF THE MONTH</h2>
-				<div itemscope itemtype="http://data-vocabulary.org/Product" class="product">
-					<meta itemprop="currency" content="GBP" />
-					<meta itemprop="brand" content="Autoglym" />
-					<meta itemprop="category" content="Car Wash Solutions" />
-					<img itemprop="image" src="img/widget-product.png" alt=""/>
-					<h3 itemprop="name">Bodywork Shampoo Conditioner</h3>
-					<h3 class="price">£<span itemprop="price">5.99</span></h3>
-					<a href="#" class="btn">buy</a>
-				</div>
-			</div>
-		</aside>		
+		<%= partial "shared/widgets/widget-product-of-the-month" %>
+		<%= partial "shared/widgets/widget-generic" %>
+		<%= partial "shared/widgets/widget-generic" %>	
 	</section>
 </section>
