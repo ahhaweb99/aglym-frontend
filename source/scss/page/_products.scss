@@ -1,7 +1,46 @@
+.product-list {
+	>
+	li {
+		background: none !important;
+			
+	}
+	
+		&.list-all {
+
+			#normal--content & {
+				@include rem('margin-top', 0px);
+				@include rem('padding-top', 0px);
+			}
+		}
+
+}
+
+
 .product-item {
 
+	
+
+		@include rem('margin-top', $baselineHeight);
+		@include rem('padding-top', $baselineHeight/2);
+		@include rem('margin-bottom', $baselineHeight);
+		@include rem('padding-bottom', 0px);
+	
+		#normal--content .list-all & {
+			@include rem('padding-left', 0px);
+
+			@include rem('margin-bottom', 0px);
+		
+		}
+
+
+		
 		border-top:1px solid $white;
-		border-bottom:1px solid $white;
+		border-bottom:0px solid $white;
+		@include clearfix;
+		
+		&:first-child {
+			border-bottom:0px solid $white;
+		}
 
 	> * {
 		@include inline-block;
@@ -11,13 +50,17 @@
 		@include rem('margin-top', $baselineHeight/2);
 		@include rem('padding-top', $baselineHeight/2);
 
-		width:50%;
+		width:54%;
 		float: right;
 		
 		@include rem('margin-bottom', $baselineHeight);
 		@include rem('padding-bottom', $baselineHeight/2);
 
+		
+	}
 
+	.total-stars {
+		display: none;
 	}
 
 	.product-title {
@@ -26,6 +69,9 @@
 		text-transform: none;
 		@include rem('margin-bottom', 0px);
 		
+		 .list-all & {
+			@include font-size(16);
+		 }
 	}
 
 	.price {
@@ -33,6 +79,10 @@
 
 		text-transform: none;
 		font-weight: 800;
+
+		.list-all & {
+			@include font-size(22);
+		 }
 	}
 
 	.button-wrapper {
@@ -50,19 +100,30 @@
 	}
 
 	.ratings {
+		@include rem('margin-bottom', $baselineHeight/2);
 
 		#normal--content & {
 		
-
-
 		li {
+
 				background: none;
 				@include rem('padding', 0px);
+				
+				&.reviews {
+					clear:both;
+				}
+
 				.svg & {
 					background: none;
 				}
+
+				&.end {
+					@include rem('margin-right', 10px);
+				}
 			}
 		}
+
+
 
 		i {
 			color: $autoGlymColor;

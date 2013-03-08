@@ -56,3 +56,44 @@
 
 
 }
+
+//_widget--product ======== */
+
+.widget--product {
+	@include prodwidgetgrad;
+	width:100%;
+	@include rem('margin-bottom', $baselineHeight);
+
+	.widget-content {
+		@include rem('padding', 28px 22px);
+		@include box-sizing(border-box);
+		@include clearfix;
+		.steps-list {
+		
+		
+			@include rem('padding-top', 0px);
+			@include rem('margin', 0px 0px $baselineHeight/2);
+		
+
+		li {
+			background: none;
+			@include rem('padding', 0px);
+
+			.svg & {
+				background: none;
+				@include rem('padding', 0px);
+
+			}
+		}
+
+		img {
+			@include rem('margin', 0 0 $baselineHeight/2);
+		}
+	}
+
+	}
+
+	@extend #cms--content;
+	
+	
+}

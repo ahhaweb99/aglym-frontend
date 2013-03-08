@@ -64,6 +64,14 @@
 	@include rem('margin-bottom', $baselineHeight);
 	@include rem('padding', 20px 0 20px);
 }
+
+.widgets--inline {
+	width:100%;
+	text-align:center;
+	> * {
+		text-align:left;
+	}
+}
 // grids
 
 .grid--container {
@@ -75,3 +83,8 @@
 	width:100%;
 	
 }
+
+.grid--half {
+	width:100%;
+}
+

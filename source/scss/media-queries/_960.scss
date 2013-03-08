@@ -18,6 +18,36 @@
 	@include rem('margin-bottom', 71px);
 }
 
+.grid--half {
+	width:45.62%;
+	.widget--product & {
+		float:left;
+		width:50%;
+	}
+}
+
+.grid--two {
+	float:right;
+	.lt-ie8 & {
+		@include rem('margin-left', 57px);
+		float:none;
+	}
+}
+
+.grid--one-third {
+	
+	margin: 0 1.4%;
+	width:31.25%;
+	&.alpha {
+		margin-left:0;
+		float:left;
+	}
+
+	&.omega {
+		float: right;
+		margin-right:0;
+	}
+}
 //_page ======================== //
 
 .logo--autoglym {
@@ -288,7 +318,7 @@
 		}
 
 		h3 {
-			width: 55%;
+			width: 54%;
 			.lt-ie8 & {
 				width:53%;
 				display: inline;
@@ -303,6 +333,26 @@
 	width:754px;
 
 }
+
+// _forms =============== //
+.form--top-right {
+	position:absolute;
+	top:$baselineHeight/2;
+	right:0;
+}
+
+// _products
+
+.product-item {
+	.product-info {
+		width:80%;
+		
+		.list-all & {
+			width:57%;
+		}
+	}
+}
+
 // show/hide for media widths content ========== //
 
 .desktop {

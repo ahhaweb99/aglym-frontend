@@ -32,10 +32,12 @@
 	}
 	
 	h1 {
-		@include font-size(20);
+		@include font-size(30);
 		@extend .title--page;
 		@include rem('margin-top', 21px);
 	}
+
+
 
 	.large-para {
 		@include font-size(20);
@@ -46,7 +48,6 @@
 	img {
 		@include rem('margin-top', $baselineHeight/2);
 		@include rem('margin-bottom', $baselineHeight);
-		width:100%;
 		height: auto;
 	}
 	

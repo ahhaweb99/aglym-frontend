@@ -276,3 +276,26 @@ margin-right : 3px; }
 .footer-label {
 	@include rem('margin-bottom', $baselineHeight/3);
 }
+
+.drop-down--holder {
+	label {
+		text-transform: none;
+			@include rem('margin-right', $baselineHeight/2);
+
+	}
+}
+
+.drop-down {
+	@include border-radius(5px);
+	@include rem('padding', 5px 8px 5px 14px);
+	@include font-size(14px);
+	color:#808080;
+	border:0;
+	@include pie;
+	@include rem('width', 200px);
+
+	.lt-ie8 & {
+		background:none;
+		vertical-align: top;
+	}
+}

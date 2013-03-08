@@ -7,6 +7,7 @@
 
 .structure--mainarea {
 	@include rem('margin-top', 0px);
+	@include clearfix;
 }
 
 .header--wrapper {
@@ -49,8 +50,25 @@
 	float:left;
 	clear:left;
 	width:24.58%;
-
+	
 }
+
+.grid--half {
+	width:45.62%;
+}
+
+.grid--two {
+	float:right;
+}
+
+.grid--inline {
+	> * {
+		@include inline-block(top);
+		@include box-sizing(border-box);
+	}	
+}
+
+
 
 // _page ======================= //
 .header--wrapper {
@@ -271,9 +289,10 @@
 }
 
 .nav--sub-nav {
-	@include rem('padding', 20px $gutterWidth 53px);
+	@include rem('padding', 20px $gutterWidth $baselineHeight);
 	> ul {
 			@include rem('padding-top', 2px);
+			@include rem('margin-bottom', 60px);
 			//border-top:1px solid $navBorder;
 			
 			li {
@@ -337,6 +356,12 @@
 				color:$white;
 			}
 
+	}
+
+	.single-nav-item {
+		@include rem('padding-top', $baselineHeight/2);
+		@include rem('margin-bottom', 0px);
+		border-top: 1px solid $white;
 	}
 }
 
@@ -404,19 +429,25 @@
 }
 
 // _products ================== //
+
+
 .product-item {
 		border:0;
-
+	
 	.product-image {
 		float:left;
 	}
 
 	.product-info {
-		@include rem('margin-top', $baselineHeight/2);
+		@include rem('margin-top', $baselineHeight);
 		@include rem('padding-top', $baselineHeight);
-		width:70%;
+		width:75%;
 		border-top:1px solid $white;
 		border-bottom:1px solid $white;
+	
+		.list-all & {
+			width:52%;
+		}
 	}
 
 	.button-wrapper {
@@ -532,7 +563,26 @@
 	}
 }
 
+// _forms =============== //
+.form--top-right {
+	position:absolute;
+	top:$baselineHeight/2;
+	right:$baselineHeight/2;
+}
 
+// _cms-content ========== //
+#normal--content,
+#cms--content {
+
+h1 {
+		@include font-size(20);
+	}
+
+h4 {
+		@include font-size(18);
+		font-weight: normal;
+	}
+}
 
 // show/hide for media widths content ========== //
 

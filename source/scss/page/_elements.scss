@@ -24,6 +24,14 @@ border:0px solid transparent;
 	background:image-url('bg-dotted-line-grey.svg') repeat-x;
 }
 
+	&.line {
+		background:none;
+		border-top:1px solid $white;
+
+		.svg & {
+			background:none;
+		}
+	}
 
 }
 
