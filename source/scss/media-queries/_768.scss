@@ -563,6 +563,31 @@
 	}
 }
 
+.widget--product {
+		@include rem('height', 260px);
+		@include rem('margin-bottom', $baselineHeight);
+	
+		.widget-content {
+			position:relative;
+			overflow: visible;
+			@include rem('height', 210px);
+;
+
+		}
+
+		img {
+			position:absolute;
+			bottom:-50px;
+			right:13px;
+		}
+
+		.steps-list {
+			li {
+				display:inline-block;
+			}
+		}
+}
+
 // _forms =============== //
 .form--top-right {
 	position:absolute;

@@ -8,6 +8,8 @@
 
 .structure--wrapper {
 	width:100%;
+	@include rem('padding', 12px 0 10px);
+
 }
 
 .header--wrapper {
@@ -55,10 +57,9 @@
 	width:100%;
 }
 
-.structure--wrapper {
-	@include rem('padding', 12px 0 10px);
+.structure--wrapper.footer {
+	@include rem('padding', 0px);
 }
-
 
 .breadcrumb--wrapper {
 	@include rem('margin-bottom', $baselineHeight);
@@ -68,6 +69,8 @@
 .widgets--inline {
 	width:100%;
 	text-align:center;
+	@include rem('margin-bottom', $baselineHeight);
+
 	> * {
 		text-align:left;
 	}

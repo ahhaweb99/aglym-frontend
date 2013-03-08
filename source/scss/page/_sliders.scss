@@ -1,0 +1,19 @@
+.slider--with-panel {
+	@include rem('margin-bottom', $baselineHeight);
+	@include clearfix;
+	background: $grey;
+	> * {
+		@include inline-block(top);
+	}
+	.panel {
+		width:39.16%;
+		height:291px;
+
+	}
+
+	img {
+		float:right;
+	}
+
+}
+

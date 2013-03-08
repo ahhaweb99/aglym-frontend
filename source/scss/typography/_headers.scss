@@ -138,3 +138,11 @@ line-height : 1.5; }
   letter-spacing: 1px;
   color:$white;
 }
+
+.title--widget-group {
+  @include rem('margin-left', $gutterWidth*2);
+  letter-spacing:0px;
+  @include font-size(19.5);
+  @include rem('margin-bottom', $baselineHeight);
+
+}

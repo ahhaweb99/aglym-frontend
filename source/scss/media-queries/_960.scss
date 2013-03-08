@@ -1,6 +1,6 @@
 //_structure =================== //
 .structure--content {
-	@include rem('width', 960px);
+	@include rem('width', 940px);
 	padding:0;
 }
 
@@ -36,8 +36,13 @@
 
 .grid--one-third {
 	
-	margin: 0 1.4%;
+	margin: 0 1.4% $baselineHeight;
 	width:31.25%;
+
+	.lt-ie8 & {
+		float:left;
+	}
+
 	&.alpha {
 		margin-left:0;
 		float:left;
@@ -329,6 +334,8 @@
 		}
 	}
 }
+
+
 .sub-title-and-nav {
 	width:754px;
 
@@ -351,6 +358,33 @@
 			width:57%;
 		}
 	}
+}
+
+.widget--product {
+		@include rem('height', 240px);
+		.widget-content {
+			position:relative;
+			overflow: hidden;
+			@include rem('height', 250px);
+			
+			.lt-ie8 & {
+				@include rem('height', 206px);
+
+			}
+		}
+
+		img {
+			position:absolute;
+			bottom:0px;
+			right:19px;
+
+		}
+
+		.steps-list {
+			li {
+				display:block;
+			}
+		}
 }
 
 // show/hide for media widths content ========== //

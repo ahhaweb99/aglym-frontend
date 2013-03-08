@@ -55,7 +55,7 @@ set :images_dir, 'img'
 
 activate :livereload
 activate :sprockets
-
+activate :asset_hash
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -77,6 +77,8 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
+
 end
 page "homepage.html", :layout => "layout"
 page "styleguide.html", :layout => "layout-inner"

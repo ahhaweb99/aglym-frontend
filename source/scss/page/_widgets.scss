@@ -63,17 +63,22 @@
 	@include prodwidgetgrad;
 	width:100%;
 	@include rem('margin-bottom', $baselineHeight);
+	@include clearfix;
 
 	.widget-content {
-		@include rem('padding', 28px 22px);
+		@include rem('padding', 17px 22px 18px);
 		@include box-sizing(border-box);
 		@include clearfix;
+		@include rem('height', 260px);
+
+		position: relative; 
 		.steps-list {
 		
 		
 			@include rem('padding-top', 0px);
 			@include rem('margin', 0px 0px $baselineHeight/2);
 		
+		}
 
 		li {
 			background: none;
@@ -86,11 +91,20 @@
 			}
 		}
 
-		img {
-			@include rem('margin', 0 0 $baselineHeight/2);
-		}
+	
+	
 	}
 
+	img {
+		@include rem('margin', 0 0 $baselineHeight/2);
+	
+		position:absolute;
+		bottom:0;
+		right:13px;
+	}
+
+	.grid--half {
+		width:50%;
 	}
 
 	@extend #cms--content;
