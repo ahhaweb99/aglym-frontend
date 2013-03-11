@@ -2,14 +2,13 @@
 	@include box-sizing(border-box);
 	width:100%;
 	padding:0 $gutterWidth;
-	
 	margin:0 auto;
+
 }
 
 .structure--wrapper {
 	width:100%;
 	@include rem('padding', 12px 0 10px);
-
 }
 
 .header--wrapper {
@@ -22,10 +21,13 @@
 .header {
 	@include rem('margin-top', $gutterWidth);
 	@include rem('min-height', 56px);
+
 }
 
 .structure--mainarea {
 	position: relative;
+	@include rem('margin-bottom', $baselineHeight);
+
 }
 
 .nav--wrapper {

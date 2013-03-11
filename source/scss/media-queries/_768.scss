@@ -600,6 +600,13 @@
 
 .widget--image {
 	overflow:visible;
+	@include rem('width', 300px);
+	@include rem('margin-right', 20px);
+	vertical-align:middle;
+
+	display:inline-block;
+	float:left;
+
 	&:after {
 			content:'';
 			background:image-url('bg-widget-shadow.png');
@@ -617,6 +624,19 @@
 .widget--title-image-para {
 	border-bottom:0px solid;
 	text-align:left;
+	float:left;
+	clear:both;
+
+	&.grid--one-third {
+		width:100%;
+	}
+
+	p {
+		display: inline-block;
+		width: 50%;
+		text-align: left;
+		vertical-align: middle;
+	}
 }
 
 .title--widget {
@@ -666,6 +686,10 @@ h4 {
 
 }
 
+
+.slider--large {
+	@include rem('margin-top', $baselineHeight*1.5);
+}
 // show/hide for media widths content ========== //
 
 .ipad {

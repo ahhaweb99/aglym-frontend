@@ -115,7 +115,8 @@
 	margin-right:auto;
 	@include rem('padding-bottom', $baselineHeight/2); 
 	display:block;
-
+	
+	@extend #cms--content;
 	p {
 		@include font-size(18);
 		text-align:center;
@@ -132,9 +133,10 @@
 	width:100%;
 	@include rem('margin-bottom', $baselineHeight/2);
 	@include clearfix;
-
+	display:inline-block;
 	text-align:center;
-	
+	border-bottom:0px solid transparent !important;
+
  	img {
  		position:static;
  		margin:0 auto;
