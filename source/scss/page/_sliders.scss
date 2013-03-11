@@ -1,18 +1,17 @@
 .slider--with-panel {
 	@include rem('margin-bottom', $baselineHeight);
 	@include clearfix;
-	background: $grey;
+	background: $black;
 	> * {
 		@include inline-block(top);
 	}
-	.panel {
-		width:39.16%;
-		height:291px;
-
+	.panel-content {
+		@include rem('padding', 18px 15px)
 	}
 
-	img {
-		float:right;
+	.title--slide-large {
+		display: none;
+
 	}
 
 }

@@ -53,6 +53,8 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+set :debug_assets, true
+
 activate :livereload
 activate :sprockets
 activate :asset_hash
@@ -80,7 +82,7 @@ configure :build do
 
 
 end
-page "homepage.html", :layout => "layout"
+page "home-page.html", :layout => "layout"
 page "styleguide.html", :layout => "layout-inner"
 page "product-thumbs.html", :layout => "layout-inner-products"
 page "product-all.html", :layout => "layout-inner-products"

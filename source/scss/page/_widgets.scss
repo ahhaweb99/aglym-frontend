@@ -40,7 +40,7 @@
 			color:$white;
 		}
 
-		.price {
+		.price {  
 			color:$priceColor;
 		}
 
@@ -90,9 +90,6 @@
 
 			}
 		}
-
-	
-	
 	}
 
 	img {
@@ -109,5 +106,38 @@
 
 	@extend #cms--content;
 	
-	
 }
+
+.widget--title-image-para {
+	border-bottom:1px solid $white;
+	@include rem('margin', $baselineHeight);
+	margin-left:auto;
+	margin-right:auto;
+	@include rem('padding-bottom', $baselineHeight/2); 
+	display:block;
+
+	p {
+		@include font-size(18);
+		text-align:center;
+		font-weight:300;
+	}
+
+	&.grid--one-third {
+		@include rem('width', 300px);
+	}
+}
+
+.widget--image {
+	@include prodwidgetgrad;
+	width:100%;
+	@include rem('margin-bottom', $baselineHeight/2);
+	@include clearfix;
+
+	text-align:center;
+	
+ 	img {
+ 		position:static;
+ 		margin:0 auto;
+ 	}
+}
+

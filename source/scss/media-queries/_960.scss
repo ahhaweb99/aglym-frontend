@@ -2,6 +2,10 @@
 .structure--content {
 	@include rem('width', 940px);
 	padding:0;
+
+	&.homepage {
+		@include rem('width', 960px);
+	}
 }
 
 .header {
@@ -362,6 +366,8 @@
 
 .widget--product {
 		@include rem('height', 240px);
+		@include rem('margin-bottom', $baselineHeight);
+
 		.widget-content {
 			position:relative;
 			overflow: hidden;
@@ -385,6 +391,63 @@
 				display:block;
 			}
 		}
+
+		p, li {
+			line-height: 1.3;
+		}
+		.widget-link {
+			position: absolute;
+			bottom:28px;
+			line-height: 17px;
+		}
+}
+
+
+.widget--image {
+	@include rem('height', 185px);
+	@include rem('margin-bottom', $baselineHeight); 
+
+}
+
+.widget--title-image-para {
+	display:inline-block;
+	p {
+		@include font-size(18);
+	}
+}
+
+
+//_sliders ===================================== //
+
+.slider--with-panel {
+	.panel {
+		width:39.16%;
+		min-height:288px;
+		float:left;
+		display: block;
+		position: relative;
+	}
+
+	.slide-image {
+		width: 60.42%;
+		float:right;
+	}
+
+	h2 {
+		@include font-size(20);
+	}
+	
+	.title--slide-large {
+		@include font-size(40);
+		position: absolute;
+		bottom:0;
+	}
+
+	p {
+		@include font-size(13);
+	}
+	
+
 }
 
 // show/hide for media widths content ========== //

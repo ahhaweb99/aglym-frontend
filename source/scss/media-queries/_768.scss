@@ -542,7 +542,7 @@
 
 }
 
-//widgets
+//_widgets =========================== //
 
 .widget {
 	text-align:center;
@@ -565,13 +565,23 @@
 
 .widget--product {
 		@include rem('height', 260px);
-		@include rem('margin-bottom', $baselineHeight);
-	
+		@include rem('margin-bottom', $baselineHeight*2);
+		position: relative;
+		overflow: visible;
+		&:after {
+			content:'';
+			background:image-url('bg-widget-shadow.png');
+			width:100%;
+			@include rem('height', 43px);
+			position: absolute;
+			bottom:-45px;
+			display: block;
+		}
+
 		.widget-content {
 			position:relative;
-			overflow: visible;
+			overflow: hidden;
 			@include rem('height', 210px);
-;
 
 		}
 
@@ -586,6 +596,33 @@
 				display:inline-block;
 			}
 		}
+}
+
+.widget--image {
+	overflow:visible;
+	&:after {
+			content:'';
+			background:image-url('bg-widget-shadow.png');
+			width:100%;
+			@include rem('height', 43px);
+			position: absolute;
+			bottom:-45px;
+			display: block;
+		}
+
+
+}
+
+
+.widget--title-image-para {
+	border-bottom:0px solid;
+	text-align:left;
+}
+
+.title--widget {
+  @include font-size(18);
+  font-family: 'LatoRegular', sans-serif;
+  text-align:left;
 }
 
 // _forms =============== //
@@ -607,6 +644,26 @@ h4 {
 		@include font-size(18);
 		font-weight: normal;
 	}
+}
+
+//_sliders ===================================== //
+
+.slider--with-panel {
+	
+	
+	h2 {
+		@include font-size(60);
+	}
+	
+	.title--slide-large {
+		@include font-size(42);
+		display: block;
+	}
+	
+	p {
+		@include font-size(20);
+	}
+
 }
 
 // show/hide for media widths content ========== //
