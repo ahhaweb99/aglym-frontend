@@ -10,6 +10,21 @@
 	@include clearfix;
 }
 
+.structure--content {
+	&.black-offset {
+		@include rem('width', 730px);
+		@include rem('height', 18px);
+		background-color:$black;
+		margin-top:-16px;
+		position: relative;
+		z-index: 100;
+	}
+
+	&.homepage {
+		@include rem('margin-top', -43px);
+	}
+}
+
 .header--wrapper {
 	position:relative;
 }
@@ -633,7 +648,7 @@
 
 	p {
 		display: inline-block;
-		width: 50%;
+		width: 49%;
 		text-align: left;
 		vertical-align: middle;
 	}
@@ -641,7 +656,7 @@
 
 .title--widget {
   @include font-size(18);
-  font-family: 'LatoRegular', sans-serif;
+  font-weight:500;
   text-align:left;
 }
 
@@ -670,7 +685,6 @@ h4 {
 
 .slider--with-panel {
 	
-	
 	h2 {
 		@include font-size(60);
 	}
@@ -686,10 +700,53 @@ h4 {
 
 }
 
-
 .slider--large {
 	@include rem('margin-top', $baselineHeight*1.5);
+
+	.title--slider-large {
+		@include font-size(35);
+		letter-spacing: 3.5px;
+		line-height: .9;
+		font-weight: 300;
+
+		span {
+			@include font-size(88);
+			letter-spacing: -1px;
+			font-weight: 500;
+		}
+	}
+
+	p {
+		position: absolute;
+		z-index: 10000;
+		top:145%;
+		@include font-size(19);
+		letter-spacing: 2px;
+	}
+
+	.slider-link {
+		bottom:70px;
+			-webkit-backface-visibility: hidden;
+			-webkit-transform: translateZ(0);
+		border-bottom:1px solid transparent;
+		&:hover {
+			border-bottom:1px solid $white;
+		}
+	}
+
+	.structure--content {
+		@include rem('width', 720px);
+	}
+
 }
+
+
+.widgets--inline {
+	@include rem('width', 635px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
 // show/hide for media widths content ========== //
 
 .ipad {

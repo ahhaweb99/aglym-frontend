@@ -4,11 +4,13 @@
 	padding:0 $gutterWidth;
 	margin:0 auto;
 
+
 }
 
 .structure--wrapper {
 	width:100%;
 	@include rem('padding', 12px 0 10px);
+	@include clearfix;
 }
 
 .header--wrapper {

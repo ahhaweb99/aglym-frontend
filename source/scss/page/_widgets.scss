@@ -125,12 +125,14 @@
 
 	&.grid--one-third {
 		@include rem('width', 300px);
+
 	}
 }
 
 .widget--image {
 	@include prodwidgetgrad;
 	width:100%;
+	@include rem('height', 185px);
 	@include rem('margin-bottom', $baselineHeight/2);
 	@include clearfix;
 	display:inline-block;
@@ -138,8 +140,9 @@
 	border-bottom:0px solid transparent !important;
 
  	img {
- 		position:static;
+ 		position:relative;
  		margin:0 auto;
+ 		height: auto;
  	}
 }
 

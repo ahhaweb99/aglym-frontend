@@ -1,5 +1,4 @@
 //= require "vendor/jquery-1.8.3.min"
-//= require "vendor/jquery-ui.min"
 //= require "vendor/mediaCheck-min"
 //= require "plugins"
 //= require "script"
