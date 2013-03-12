@@ -535,8 +535,19 @@
 	.structure--content {
 		@include rem('width', 950px);
 	}
+
+	.slider-link {
+		bottom:70px;
+	}
 }
 
+
+.rsBullets {
+	top:-50px;
+	@include rem('width', 960px);
+	padding-left:1px;
+
+}
 // show/hide for media widths content ========== //
 
 .desktop {

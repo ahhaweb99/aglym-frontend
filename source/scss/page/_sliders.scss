@@ -76,7 +76,7 @@
 		.slide-text {
 			position: absolute;
 			z-index: 10000;
-			top:10%;
+			top:0%;
 		}
 		
 		.title--slider-large {
@@ -169,20 +169,32 @@
 		}
 
 		.rsBullets {
-			position:absolute;
-			z-index: 40000;	
-			@include rem('width', 960px)		
+			position:relative;
+			z-index: 2;	
+				
+			top:-35px;
+			margin: 0 auto;
+			@include rem('padding-right', 13px);
+			text-align: right;
+			@include clearfix;
+
 		}
 
 		.rsBullet {
-			background:$white;
+			cursor:pointer;
+			background:#666;
 			@include inline-block(top);
-			width:10px;
-			height:10px;
+			@include rem('width', 10px);
+			@include rem('height', 10px);
+			@include rem('margin-right', 5px);
 			@include border-radius(5px);
 			 span {
 			 	display: block;
-			 	width:10px;
-				height:10px;
+			 	@include rem('width', 10px);
+				@include rem('height', 10px);
 			 }
+		}
+
+		.rsNavSelected {
+			background:$white;
 		}

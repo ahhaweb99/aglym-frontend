@@ -15,7 +15,7 @@
 		@include rem('width', 730px);
 		@include rem('height', 18px);
 		background-color:$black;
-		margin-top:-16px;
+		@include rem('margin-top', -46px);
 		position: relative;
 		z-index: 100;
 	}
@@ -725,7 +725,7 @@ h4 {
 	}
 
 	.slider-link {
-		bottom:70px;
+		bottom:100px;
 			-webkit-backface-visibility: hidden;
 			-webkit-transform: translateZ(0);
 		border-bottom:1px solid transparent;
@@ -738,6 +738,24 @@ h4 {
 		@include rem('width', 720px);
 	}
 
+	.slide {
+		max-height: 631px;
+		overflow: hidden;
+		position:relative;
+	}
+
+	.slide-text {
+		top:10%;
+	}
+
+}
+
+.rsBullets {
+	@include rem('width', 720px);
+	@include rem('padding-left', 10px);
+	text-align: left;
+	left:13px;
+	top:-50px;
 }
 
 
