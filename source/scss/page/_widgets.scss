@@ -149,7 +149,7 @@
 
 .widget--expander {
 		@include expandergrad;
-		
+		@include rem('margin-bottom', $baselineHeight);
 	.widget-content {
 		@include rem('padding', 23px 33px 13px);
 		@include clearfix;
@@ -167,9 +167,46 @@
 			@include transition-property(height);
   			@include transition-duration(.5s);
 		}
+		
+		&.on-perm {
+			height:auto;
+		}
+
 	}
 
 	hr {
+		width:100%;
 		@include rem('margin-top', $baselineHeight/2);
+		.lt-ie9 & {
+			clear: both;
+		}
+	}
+
+	.structure--main-column {
+		min-height: auto;
+	}
+	
+	.lt-ie8 & {
+		.video-list {
+			visibility: hidden;
+		}
+		
+		.on {
+			.video-list {
+				visibility: visible;
+			}
+		}
+
+		.grid--two {
+			float:right;
+			margin-top: -27px;
+		}
+	}
+}
+
+
+.related-products {
+	> * {
+		color:black;
 	}
 }

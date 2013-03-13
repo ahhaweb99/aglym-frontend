@@ -37,6 +37,11 @@
 	background:$bgGrey;
 }
 
+.bg--white {
+	background:$white;
+}
+
+
 .grad--grey {
 	 $experimental-support-for-svg:true;
 	 @include background(linear-gradient(#fafafa, #d2d2d2));

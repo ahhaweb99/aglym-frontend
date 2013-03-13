@@ -111,15 +111,16 @@ $(document).ready(function(){
 	if($('.widget--expander').length) {
 		$('.expand').click(function(e){
 			e.preventDefault();
-			var expander = $(this).parent().find('.expander-content');
+			var expander = $(this).parent().find('.expander-content'); 
 			expander.toggleClass('on');
 
 			if(expander.hasClass('on')) {
-
+				 $(this).text('Close')
 			var wrapperHeight = $(this).parent().height();
 			expander.css('height', wrapperHeight-100);
 
 			} else {
+				$(this).text('Open')
 				expander.removeAttr('style');
 			}
 		});

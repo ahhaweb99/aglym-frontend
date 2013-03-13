@@ -3,10 +3,13 @@ $(document).ready(function(){
   
   mediaCheck({
     media: '(max-width: 767px)',
-
+    entry: function() {
+       closeExpanders();
+    },
     exit: function() {
     	//remove mobile nav
       	removeMenus();
+         closeExpanders();
     }
 
   });
@@ -24,9 +27,14 @@ $(document).ready(function(){
     $('#sub-nav').removeAttr('style');
     $('#sub-nav').removeClass('on');
 
+
+  }
+
+  function closeExpanders(){
+
     $('.expander-content').removeClass('on');
     $('.expander-content').removeAttr('style');
-
+    $('.expand').text('Open');
   }
 
 });

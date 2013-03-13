@@ -57,11 +57,18 @@
 .structure--main-column {
 	width:70.31%;
 	float:right;
-	.product-detail & {
+	.product-detail > & {
 		width:67.12%;
 		@include rem('margin-top', -430px);
 		position: relative;
 		z-index: 2;
+		border:1px solid transparent;
+		@include clearfix;
+
+		.lt-ie9 & {
+			@include rem('margin-top', -427px);
+
+		}
 	}
 
 	.lt-ie8 & {
@@ -546,6 +553,7 @@
 
 .video-list {
 	width: auto;
+	margin:1px 0px 0px 1px;
 	li {
 		position: relative;	
 		@include inline-block(top);
@@ -554,7 +562,7 @@
 		float:left;
 
 		&:last-child {
-			@include rem('margin-right', 0px);
+			@include rem('margin-right', 2px);
 			float: right;
 		}
 	}
@@ -742,6 +750,20 @@
 		vertical-align: middle;
 	}
 }
+
+.widget--expander {
+	.expand {
+	position:absolute;
+	top:$baselineHeight;
+	right:37px;
+	}
+
+	.structure--main-column {
+		width:79.31%;
+		min-height: auto;
+	}
+}
+
 
 .title--widget {
   @include font-size(18);
