@@ -16,7 +16,6 @@ $(document).ready(function(){
 	$('#sub-nav-link').click(function(){
 
 			toggleSubNav();
-
 	});
 
 	function removeSubNav(){
@@ -109,6 +108,21 @@ $(document).ready(function(){
 
 	// END -- Script for top menus (main-site, language, search) =========================== //
 
+	if($('.widget--expander').length) {
+		$('.expand').click(function(e){
+			e.preventDefault();
+			var expander = $(this).parent().find('.expander-content');
+			expander.toggleClass('on');
 
+			if(expander.hasClass('on')) {
+
+			var wrapperHeight = $(this).parent().height();
+			expander.css('height', wrapperHeight-100);
+
+			} else {
+				expander.removeAttr('style');
+			}
+		});
+	}
 });
 

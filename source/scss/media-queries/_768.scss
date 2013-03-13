@@ -40,6 +40,11 @@
 	float:left;
 	width:24.58%;
 
+	.product-detail & {
+		width:19.78%;
+		margin-left:1px;
+	}
+
 	.lt-ie8 & {
 		
 		margin-right:50px;
@@ -52,7 +57,13 @@
 .structure--main-column {
 	width:70.31%;
 	float:right;
-	
+	.product-detail & {
+		width:67.12%;
+		@include rem('margin-top', -430px);
+		position: relative;
+		z-index: 2;
+	}
+
 	.lt-ie8 & {
 		display: inline;
 		zoom:1;
@@ -463,13 +474,91 @@
 		.list-all & {
 			width:52%;
 		}
+		
+		.product-detail & {
+			width:67%;
+		
+			@include rem('margin-top', 0px);
+			@include rem('padding-top', 0px);
+
+			border-top:0px solid $white;
+			border-bottom:0px solid $white;
+		}
+		
+
 	}
+
+	
 
 	.button-wrapper {
 		width:70%;
 		float:right;
 	}
 
+}
+
+.product-preview {
+
+	.product-thumbs {
+		@include clearfix;
+		display:block;
+		text-align:left;
+		margin-left:1px;
+		li {
+			@include inline-block(top);
+			@include rem('width', 65px);
+			@include rem('height', 65px);
+			border: 1px solid $white;
+		}
+	}
+
+	p {
+		text-align: left;
+		margin-bottom:$baselineHeight/2;
+		padding:0;
+		border-bottom: 1px solid $white;
+		display: block;
+	}
+
+
+}
+
+.product-detail-image {
+	margin:0 auto $baselineHeight*2 $baselineHeight;
+}
+
+.product-information {
+	@include rem('min-height', 209px);
+}
+
+.basket-tools {
+	fieldset {
+
+		> * {
+			@include inline-block(top);
+		}
+	}
+	.drop-down {
+		margin:3px 8px 0 8px;
+
+	}
+}
+
+.video-list {
+	width: auto;
+	li {
+		position: relative;	
+		@include inline-block(top);
+		margin-right:4.2%;
+		width:21.73%;
+		float:left;
+
+		&:last-child {
+			@include rem('margin-right', 0px);
+			float: right;
+		}
+	}
+	
 }
 
 // _element =================== //

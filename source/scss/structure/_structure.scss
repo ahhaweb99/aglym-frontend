@@ -3,8 +3,6 @@
 	width:100%;
 	padding:0 $gutterWidth;
 	margin:0 auto;
-
-
 }
 
 .structure--wrapper {
@@ -47,6 +45,10 @@
 .structure--side-column {
 	display: none;
 	margin-bottom:$baselineHeight;
+
+	.product-detail & {
+		@include inline-block(top);
+	}
 }
 
 .structure--main-column {
@@ -94,4 +96,3 @@
 .grid--half {
 	width:100%;
 }
-

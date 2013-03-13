@@ -12,7 +12,7 @@
   	@include transition-duration(.5s);
 
 	&.on {
-		height:auto;
+		height:200px;
 		@include transition-property(height);
   		@include transition-duration(.5s);
 	}

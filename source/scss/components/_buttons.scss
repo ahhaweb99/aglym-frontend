@@ -52,6 +52,26 @@
     text-decoration: none;
      @include greygrad-inverted;
   }
+
+  &.add-to-basket {
+  position:relative;
+  width: 156px;
+  padding-left: 32px;
+    i {
+      width:21px;
+      height:19px;
+      background-image:image-url('icon-basket-white.png');
+    
+      .svg & {
+        background-image:image-url('icon-basket-white.svg');
+      }
+      
+      display: block;
+      position: absolute;
+      left: 19px;
+      top: 5px;
+    }
+  }
 }
 
 input[type="submit"]::-moz-focus-inner {

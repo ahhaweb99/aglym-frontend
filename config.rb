@@ -87,3 +87,5 @@ page "styleguide.html", :layout => "layout-inner"
 page "product-thumbs.html", :layout => "layout-inner-products"
 page "product-all.html", :layout => "layout-inner-products"
 page "product-overview.html", :layout => "layout-inner-products"
+page "product-detail.html", :layout => "layout-inner-products"
+

@@ -146,3 +146,30 @@
  	}
 }
 
+
+.widget--expander {
+		@include expandergrad;
+		
+	.widget-content {
+		@include rem('padding', 23px 33px 13px);
+		@include clearfix;
+		position: relative;
+	}
+	
+	.expander-content {
+		height:0;
+		overflow: hidden;
+		@include clearfix;
+		@include transition-property(height);
+  		@include transition-duration(.5s);
+		&.on {
+			height:auto;
+			@include transition-property(height);
+  			@include transition-duration(.5s);
+		}
+	}
+
+	hr {
+		@include rem('margin-top', $baselineHeight/2);
+	}
+}

@@ -22,7 +22,11 @@ $(document).ready(function(){
 		$('#ipad-drop').removeClass('on');
 
     $('#sub-nav').removeAttr('style');
-     $('#sub-nav').removeClass('on');
+    $('#sub-nav').removeClass('on');
+
+    $('.expander-content').removeClass('on');
+    $('.expander-content').removeAttr('style');
+
   }
 
 });

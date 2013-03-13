@@ -15,16 +15,22 @@
 }
 @mixin widgetgrad { 
 	$experimental-support-for-svg: true;
-	 @include background(linear-gradient(#000, #4d4d4d));
-		@include pie;
+	@include background(linear-gradient(#000, #4d4d4d));
+	@include pie;
 
 }
 
 @mixin prodwidgetgrad { 
 	$experimental-support-for-svg: true;
-	 @include background(linear-gradient(#7a7a7a, #010101));
-		@include pie;
+	@include background(linear-gradient(#7a7a7a, #010101));
+	@include pie;
 
+}
+
+@mixin expandergrad { 
+	$experimental-support-for-svg: true;
+	@include background(linear-gradient(#010101, #2e2e2e));
+	@include pie;
 }
 
 .bg--grey {
