@@ -25,7 +25,7 @@ $(document).ready(function(){
 	}
 
 	function toggleSubNav() {
-		$('#sub-nav').toggleClass('on');
+			$('#sub-nav').toggleClass('on');
 			if($('#sub-nav').hasClass('on')) {
 				menuAnim($('#sub-nav'));
 			} else {
@@ -71,7 +71,7 @@ $(document).ready(function(){
 	function menuAnim(menu) {
 
 		var wrapperHeight = menu.parent().height();
-		console.log(menu.attr('id'));
+		console.log(wrapperHeight);
 		if(menu.attr('id') == 'sub-nav'){
 			wrapperHeight = wrapperHeight - 42;
 			//console.log('matches!');
@@ -116,11 +116,29 @@ $(document).ready(function(){
 
 			if(expander.hasClass('on')) {
 				 $(this).text('Close')
-			var wrapperHeight = $(this).parent().height();
-			expander.css('height', wrapperHeight-100);
+			var parentHeight = $(this).parent().height();
+			expander.css('height', parentHeight-50);
 
 			} else {
 				$(this).text('Open')
+				expander.removeAttr('style');
+			}
+		});
+	}
+
+	if($('.reveal').length) {
+		$('.reveal-link').click(function(e){
+			e.preventDefault();
+			var expander = $(this).parent(); 
+			expander.toggleClass('on');
+
+			if(expander.hasClass('on')) {
+			
+			var parentHeight = $(this).parent().height();
+			expander.css('height', parentHeight);
+
+			} else {
+				
 				expander.removeAttr('style');
 			}
 		});

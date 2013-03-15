@@ -27,3 +27,299 @@
 
 }
 
+.faq-list {
+
+		> li ul li {
+			background: none !important;
+		}
+
+		> li ul {
+			margin-top:0px !important;
+			margin-bottom:$baselineHeight/3 !important;
+			padding-top:0px !important;
+			padding-bottom:0px !important;
+		}
+
+		a {
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				border-bottom: 1px solid $white;
+			}
+		}
+
+		> li > a {
+			font-weight: 700;
+		}
+
+		> li {
+			margin-bottom:$baselineHeight/3 !important;
+			background:image-url('bg-arrow-expand.png') no-repeat 0px 5px !important;
+		}
+
+		
+		> 
+			li > ul {
+				height:0;
+				overflow: hidden;
+				@include transition-property(height);
+  				@include transition-duration(.5s);
+			}
+		
+
+		.on {
+			
+			
+				background-position:-709px 5px !important;
+			
+
+			> ul {
+				height:auto;
+				@include transition-property(height);
+  				@include transition-duration(.5s);
+
+			}
+		}
+}
+
+
+.banner {
+
+	@include rem('margin-bottom', $baselineHeight);
+	@include clearfix; 
+
+	.panel {
+		@include rem('padding', 42px 24px 42px);
+		@include box-sizing(border-box);
+		position:relative;
+	}
+	
+	.panel--right {
+		@include rem('padding', 32px 24px 0);
+		@include box-sizing(border-box);
+		@include clearfix;
+	}
+
+	.logo {
+		position:absolute;
+		bottom:48px;
+		right:$baselineHeight;
+		width:68px;
+		height: auto;
+	}
+
+	h1 {
+		@include font-size(35);
+		text-transform: none;
+		@include rem('margin-bottom', $baselineHeight/3);
+		@include rem('padding-bottom', 0px);
+
+	}
+
+	p {
+		@include font-size(16);
+		line-height: 1.5;
+
+	
+	}
+
+	
+	input[type="text"] {
+		@include rem('padding-top', 10px);
+		@include rem('padding-bottom', 10px);
+	}
+
+	.btn {
+		@include font-size(18);
+		@include rem('padding-top', 7.5px);
+		@include rem('padding-bottom', 4px);
+	}
+
+	&.results {
+
+		.grid--container {
+			@include clearfix;
+			@include rem('margin-bottom', $baselineHeight/2);
+		}
+
+		p {
+	   		clear:both;
+		}
+		.panel {
+			@include rem('padding', 11px 11px);
+
+		}
+		.panel--right {
+			@include rem('padding', 11px 11px);
+		}
+
+		.logo {
+			right:14px;
+			bottom:14px;
+		}
+	}
+
+}
+
+.title--bay {
+		@include font-size(25);
+	}
+
+.input-and-button {
+	@include rem('margin-bottom', $baselineHeight);
+	@include clearfix; 
+
+	.grid--half {
+		&.alpha {
+			width:61%;
+			float:left;
+		}
+		&.omega {
+			width:auto;
+			float:right;
+		}
+
+		.btn {
+			min-width: 108px;
+		}
+	}
+
+	.results & {
+		
+		.btn {
+
+			min-width:93px;
+	
+		}
+	}
+}
+
+
+
+.media--item {
+	@extend #cms--content;
+	@include rem('padding-bottom', $baselineHeight/2);
+
+	#normal--content &,
+	#cms--content &  {
+		li {
+			background:none;
+		}
+
+		img {
+			padding:0;
+			margin:0 17px $baselineHeight/2 0;
+			float:left;
+		}
+
+		ul, ol {
+			margin-bottom: $baselineHeight/2;
+		}
+	}
+	
+	.media--image {
+		width:19.23%;
+		float:left;
+	}
+
+	
+
+	.media--list & {
+		background:none !important;
+		padding-left:0 !important;
+	}
+	
+	hr {
+		display: inline-block;
+		width: 100%;
+	}
+	
+}
+
+.results-stats {
+	line-height: 2.2;
+}
+
+.borders-top-bottom {
+	border-top:1px solid $white;
+	border-bottom:1px solid $white;
+	@include rem('margin-top', $baselineHeight);
+	clear:both;
+	width:100%;
+	@include font-size(24);
+	@include rem('min-height', 47px);
+	@include rem('line-height', 37px);
+	> * {
+			display: inline-block;
+		}
+
+	i {
+		@include rem('width', 35px);
+		@include rem('margin-top', 3px);
+
+		vertical-align: top;
+		.lt-ie8 & {
+			float:left;
+		}
+	}
+	p {
+		line-height:46px;
+		margin-bottom: 0;
+
+		.lt-ie8 & {
+			margin-top:8px;
+		}
+	}
+}
+
+.results-list {
+	@include clearfix;
+	
+	li {
+		border-top:1px solid $white;
+		@include rem('padding-top', $baselineHeight/2);
+		@include rem('padding-bottom', $baselineHeight/2);
+	}
+
+	i {
+		clear:left;
+	}
+
+	.result-title {
+		@include rem('margin-bottom', 0px);
+
+		a {
+			color:$bodyGrey;
+
+			&:hover {
+				border-bottom:1px solid $bodyGrey;
+
+			}
+		}
+	}
+}
+
+i.icon-bottle {
+	background:image-url('icons-valeting-bay.png') no-repeat;
+	@include rem('width', 73px);
+	@include rem('height', 73px);
+	@include rem('margin-right', 23px);
+	@include rem('margin-bottom', $baselineHeight);
+
+		float:left;
+
+	display:inline-block;
+}
+
+
+hr.hr-solid {
+	border: 1px solid $white;
+	border-left: 0px solid $white;
+	border-top: 0px solid $white;
+	border-right:0px solid $white;
+
+	background:none;
+	.svg & {
+		background:none;
+	}
+}

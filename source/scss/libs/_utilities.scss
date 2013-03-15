@@ -20,9 +20,19 @@
 	text-transform: uppercase;
 }
 
+.lower-case {
+		text-transform: none !important;
+
+}
+
 .bold-text {
 	font-weight:600;
 }
+
+.floatLeft {
+	float:left !important;
+}
+
 
 .floatRight {
 	float:right !important;
@@ -64,5 +74,5 @@
 }
 
 .less-margins {
-	margin:10px 0 10px !important;
+	margin:43px 0 10px !important;
 }

@@ -78,6 +78,27 @@ input[type="submit"]::-moz-focus-inner {
   padding:5px 2px 2px;
 }
 
+
+
+.back-link {
+   background:image-url('bg-arrow-left.png') no-repeat;
+   background-position:0px 5px;
+   padding-left:16px;
+   border-bottom:1px solid transparent;
+   line-height: 20px;
+  .svg & {
+    background:image-url('bg-arrow-left.svg') no-repeat;
+    background-position:0px 5px;
+
+  }
+
+  &:hover {
+    background:image-url('bg-arrow-left.svg') no-repeat;
+    background-position:-250px 5px;
+    border-bottom:1px solid $white;
+  }
+}
+
 //input[type="submit"].btn:hover { border-color: $buttonBorderColor; }
 
 .btn:first-child { *margin-left: 0; }

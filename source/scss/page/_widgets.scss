@@ -1,4 +1,4 @@
-.widget {
+.widget, .widget--fags {
 	border:1px solid $borderColor;
 	margin-left: 1px;
 	@include rem('margin-bottom', $baselineHeight);
@@ -170,6 +170,11 @@
 		
 		&.on-perm {
 			height:auto;
+			.lt-ie8 & {
+				.video-list {
+					visibility:visible;
+				}
+			}
 		}
 
 	}
@@ -204,6 +209,10 @@
 	}
 }
 
+.widget--faqs {
+	@extend .widget;
+
+}
 
 .related-products {
 	> * {

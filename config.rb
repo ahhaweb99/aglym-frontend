@@ -84,8 +84,13 @@ configure :build do
 end
 page "home-page.html", :layout => "layout"
 page "styleguide.html", :layout => "layout-inner"
+page "wide-page.html", :layout => "layout-inner"
+page "news.html", :layout => "layout-inner"
+page "news-article.html", :layout => "layout-inner"
 page "product-thumbs.html", :layout => "layout-inner-products"
 page "product-all.html", :layout => "layout-inner-products"
 page "product-overview.html", :layout => "layout-inner-products"
 page "product-detail.html", :layout => "layout-inner-products"
+page "valeting-bay.html", :layout => "layout-inner-valeting"
+page "valeting-bay-results.html", :layout => "layout-inner-valeting"
 

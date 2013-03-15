@@ -20,6 +20,14 @@
 
 }
 
+@mixin widgetgrad-inverted { 
+	$experimental-support-for-svg: true;
+	@include background(linear-gradient(#4d4d4d, #232021));
+	@include pie;
+
+}
+
+
 @mixin prodwidgetgrad { 
 	$experimental-support-for-svg: true;
 	@include background(linear-gradient(#7a7a7a, #010101));
@@ -31,6 +39,10 @@
 	$experimental-support-for-svg: true;
 	@include background(linear-gradient(#010101, #2e2e2e));
 	@include pie;
+}
+
+.red {
+	color:$autoGlymColor;
 }
 
 .bg--grey {
@@ -52,6 +64,15 @@
 
 .grad--dark-grey {
 	@include widgetgrad;
+}
+
+.grad--red {
+	@include background(linear-gradient(#44040A, #e71a33));
+	@include pie;
+}
+
+.grad--dark-grey-inverted {
+	@include widgetgrad-inverted;
 }
 
 .body-grey {
