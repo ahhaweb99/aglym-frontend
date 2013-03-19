@@ -234,6 +234,7 @@
 
 	input {
 		width:48px;
+		@include rem('margin-right', 8px);
 	}
 
 	label {
@@ -338,13 +339,24 @@
 		width: auto;
 		@include rem('margin-top', 12px);
 		display: inline-block;
-		border-bottom:1px solid transparent;
+		border-bottom:1px solid transparent; 
 		
 	}
 }
 
+
+li.stars {
+	#normal--content & {
+		img {
+			margin:0;
+			padding:0;
+		}
+	}
+	
+}
+
 .review {
-	@extend #cms-content;
+	@extend #cms--content;
 	@include rem('margin-bottom', $baselineHeight);		
 }
 

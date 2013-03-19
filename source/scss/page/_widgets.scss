@@ -214,8 +214,56 @@
 
 }
 
+.widget--generic {
+	@include rem('margin-bottom', $baselineHeight);
+	@extend #cms--content;
+	position:relative;
+	@include clearfix;
+	.widget-content {
+		@include widgetgrad-inverted;
+		@include rem('padding', 35px 22px);
+		@include clearfix;
+		
+	&.less-padding {	
+		@include rem('padding', 15px 22px);
+	}
+
+		form {
+			margin-bottom: 0;
+		}
+
+		label {
+			@include rem('margin-bottom', $baselineHeight/2);
+		}
+	}
+
+
+}
+
+
+.widget--red {
+	@include background(linear-gradient(#44040A, #e71a33));
+	@include pie;
+	@include rem('margin-bottom', $baselineHeight*2);
+	#normal--content & {
+		img {
+			padding:0;
+			margin:0;
+		}
+	}
+}
+
+.bottom-margin {
+	@include rem('margin-bottom', $baselineHeight);
+}
+
 .related-products {
 	> * {
 		color:black;
 	}
+}
+
+.tag {
+	position:absolute;
+	top:-14px;
 }

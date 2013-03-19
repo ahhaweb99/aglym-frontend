@@ -42,7 +42,14 @@
 	float:none;
 }
 
+.no-borders {
+	border:0 solid !important;
+}
 
+.underline {
+	border-bottom:1px solid $white !important;
+	line-height:40px;
+}
 
 
 .clearfix:after {
@@ -75,4 +82,8 @@
 
 .less-margins {
 	margin:43px 0 10px !important;
+}
+
+.indent-left {
+	margin-left:60px;
 }

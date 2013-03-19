@@ -43,13 +43,17 @@
 		float:left;
 		width:50%;
 	}
+
+	.lt-ie8 & {
+
+
+	}
 }
 
 .grid--two {
 	float:right;
 	.lt-ie8 & {
 		@include rem('margin-left', 57px);
-		float:none;
 	}
 }
 
@@ -145,8 +149,21 @@
 	.media--text {
 			width:80.25%;
 			float:right;
+
+			.address & {
+				width:66.25%;
+			}
 		
 	}
+
+
+}
+
+.results-list {
+	.result-info {
+		width:90%;
+	}
+
 }
 
 /* Navigation ====*/
@@ -428,6 +445,31 @@
 	}
 }
 
+.widget--title-image-para {
+
+
+}
+
+.widget {
+	.grid--holder & {
+		height:258px;
+	}
+
+	.widget-content {
+		.grid--holder & {
+			height:222px;
+			@include rem('padding', 18px 33px);
+		}
+	}
+
+
+		.grid--holder & {
+			h2 {
+				@include rem('margin-bottom', $baselineHeight/2);
+			}
+		}
+}
+
 .title--widget {
 	text-align:center;
 
@@ -610,6 +652,10 @@
 	@include rem('width', 960px);
 	padding-left:1px;
 
+}
+
+.view-all {
+	right:0;
 }
 // show/hide for media widths content ========== //
 

@@ -37,13 +37,38 @@ $(window).load(function(){
 		  		});
 
 		  		setTimeout(function() { $('.slider--large').removeClass('inactive'); }, 1000);
-		  			console.log('scripts-loaded');
- 		 }
-	});
-	
-    		
-    	
+		  	
+ 			 }
+		});	
 
+	}
+
+	if($('.slider--with-panel').length) {
+		yepnope({
+  			load: ['js/vendor/jquery.royalslider.min.js', 'js/vendor/jquery.rs.auto-height.min.js', 'js/vendor/jquery.rs.bullets.min.js'],
+  			complete: function () {
+     		 // all the scripts have loaded, do whatever you want here
+     		 	$('.slider--with-panel').royalSlider({
+				    arrowsNav: false,
+				    fadeinLoadedSlide: true,
+				    controlNavigationSpacing: 0,
+				    imageAlignCenter:false,
+				    loop: false,
+				    loopRewind: true,
+				    numImagesToPreload: 3,
+				    keyboardNavEnabled: true,
+				    usePreloader:true,
+				    autoHeight:true,
+				    allowCSS3:true,
+				    controlNavigation: 'bullets'
+		  		});
+
+		  		setTimeout(function() { $('.slider--with-panel').removeClass('inactive'); }, 1000);
+
+     		}
+
+
+		});	
 
 	}
 });

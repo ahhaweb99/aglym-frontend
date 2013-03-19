@@ -86,13 +86,20 @@ color : $formText;
 }
 }
 
-input[type="text"] {
+input[type="text"], textarea {
 	@include border-radius(5px);
 	@include rem('padding', 5px 8px 5px 14px);
 	@include font-size(14px);
 	color:#808080;
 	@include pie;
+	
+	.error & {
+		border:2px solid $autoGlymColor;
+	}
+}
 
+textarea {
+	@include rem('padding', 7px 8px 7px 14px);
 }
 
 .input-mini {
@@ -277,13 +284,34 @@ margin-right : 3px; }
 	@include rem('margin-bottom', $baselineHeight/3);
 }
 
+label {
+	.error & {
+		color:$autoGlymColor;
+	}
+}
+
 .drop-down--holder {
 	label {
 		text-transform: none;
 			@include rem('margin-right', $baselineHeight/2);
-
 	}
 }
+
+.form-errors {
+	i {
+	color:$autoGlymColor;
+	@include font-size(28);
+	}
+
+	h3 {
+		margin: 10px 0 10px 0;
+		width:86%;
+		float:right;
+		color:$autoGlymColor;
+	}
+
+}
+
 
 .drop-down {
 	@include border-radius(5px);
@@ -298,4 +326,60 @@ margin-right : 3px; }
 		background:none;
 		vertical-align: top;
 	}
+}
+
+.form-list {
+	
+	#normal--content &,
+	.svg #normal--content & {
+		li {
+			background:none;
+			padding-left:0;
+			padding-bottom:$baselineHeight/4;
+			position:relative;
+		}
+	}
+	
+
+	li {
+		clear:both;
+	}
+
+	.inline-errors {
+		position:absolute;
+		top:0;
+		right:0;
+		color:$autoGlymColor;
+		display:none;
+	}
+
+	&.reviews-list {
+		>
+		li {
+			border-top:1px solid #fff;
+			padding-top:10px;
+		}
+
+	}
+	
+	input[type="radio"], input[type="submit"] {
+		width:auto;
+	}
+	
+	input[type="text"] {
+		width:100%;
+		margin-bottom:$baselineHeight/1.5;
+	}
+
+	.radio-group {
+		li {
+			border:0;
+			margin-right:10px;
+		}
+	}
+}
+
+.radio-group {
+
+
 }

@@ -1,0 +1,9 @@
+.checkout-steps {
+	li {
+		text-transform: uppercase;
+
+		&.current {
+			a { color:$autoGlymColor; }
+		}
+	}
+}

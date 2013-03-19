@@ -2,6 +2,12 @@
 	@include rem('margin-bottom', $baselineHeight);
 	@include clearfix;
 	background: $black;
+	position:relative;
+
+	&.inactive {
+			visibility: hidden;
+		}
+
 	> * {
 		@include inline-block(top);
 	}
@@ -13,7 +19,15 @@
 		display: none;
 
 	}
-
+	
+	.rsBullets {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+		right: 0;
+		left: auto;
+		width: auto;
+	}
 }
 
 .slider--large {

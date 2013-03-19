@@ -8,6 +8,7 @@
 	height:0;
 	display:block;
 	overflow:hidden;
+	margin:0 auto;
 	@include transition-property(height);
   	@include transition-duration(.5s);
 

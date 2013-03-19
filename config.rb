@@ -53,11 +53,11 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
-set :debug_assets, true
+#set :debug_assets, true
 
 activate :livereload
 activate :sprockets
-activate :asset_hash
+#activate :asset_hash
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -91,6 +91,13 @@ page "product-thumbs.html", :layout => "layout-inner-products"
 page "product-all.html", :layout => "layout-inner-products"
 page "product-overview.html", :layout => "layout-inner-products"
 page "product-detail.html", :layout => "layout-inner-products"
+page "product-review-form.html", :layout => "layout-inner-products"
 page "valeting-bay.html", :layout => "layout-inner-valeting"
 page "valeting-bay-results.html", :layout => "layout-inner-valeting"
+page "search-results.html", :layout => "layout-inner"
+page "search-results-two.html", :layout => "layout-inner"
+page "where-to-buy.html", :layout => "layout-inner"
+page "where-to-buy-results.html", :layout => "layout-inner"
+page "contact-us.html", :layout => "layout-inner"
+page "checkout-05-complete.html", :layout => "layout-inner"
 

@@ -3,7 +3,7 @@
 	width:100%;
 	padding:0 $gutterWidth;
 	margin:0 auto;
-
+	position: relative;
 }
 
 .structure--wrapper {
@@ -54,7 +54,6 @@
 
 .structure--main-column {
 	width:100%;
-	min-height:400px;
 	margin-bottom:$baselineHeight;
 }
 
@@ -96,4 +95,13 @@
 
 .grid--half {
 	width:100%;
+}
+
+
+.grid--holder {
+	@include rem('margin-bottom', $baselineHeight*2);
+	clear:both;
+	width:100%;
+
+	
 }
