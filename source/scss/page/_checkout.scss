@@ -7,3 +7,13 @@
 		}
 	}
 }
+
+table.checkout {
+	display: table; 
+	 thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	caption {
+		background-color : $bgGrey;
+	}
+}

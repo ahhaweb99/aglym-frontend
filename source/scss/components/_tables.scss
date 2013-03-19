@@ -17,6 +17,16 @@ border-collapse : collapse;
 border-spacing : 0;
 background-color : $grey;
 
+&.checkout {
+	padding:$baselineHeight/2;
+	border-spacing : $baselineHeight/2;
+	background-color : $bgGrey;
+	
+	tbody {
+		background-color : $bgGrey;
+	}
+}
+
 th,
 td {
 padding : $baselineHeight/2;

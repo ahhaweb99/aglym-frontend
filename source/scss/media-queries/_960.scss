@@ -657,6 +657,16 @@
 .view-all {
 	right:0;
 }
+
+// _checkout ======================== //
+.checkout-steps {
+	li {
+		@include font-size(13);
+		width:19.7%;
+	
+	}
+}
+
 // show/hide for media widths content ========== //
 
 .desktop {

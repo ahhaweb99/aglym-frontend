@@ -1167,6 +1167,58 @@ h4 {
 	}
 
 }
+
+// _checkout ======================== //
+.checkout-steps {
+	li {
+		text-align: center;
+		width:19.65%;
+		background-color:$bgGrey;
+		padding:7px 0;
+		position:relative;
+		overflow: visible;
+		@include font-size(12);
+
+		&:after {
+			content:'';
+			background:image-url('checkout-arrow.png');
+			width:20px;
+			height:37px;
+			display: block;
+			position:absolute;
+			top:0;
+			right:-19px;
+			z-index:100;
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+
+		&.current {
+			background-color:$autoGlymColor;
+
+			a {
+				color:$white;
+			}
+		}
+	}
+}
+
+table.checkout {
+
+	 thead, tbody, th, td { 
+		display: table-cell; 
+	}
+
+	td {
+		width:27.75%;
+	}
+	
+}
+
 // show/hide for media widths content ========== //
 
 .ipad {
@@ -1196,3 +1248,4 @@ h4 {
 .max-ipad {
 	display:none !important;
 }
+
