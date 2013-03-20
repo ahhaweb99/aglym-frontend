@@ -1203,7 +1203,9 @@ h4 {
 
 		&.current {
 			background-color:$autoGlymColor;
-
+			&:after {
+				background:image-url('checkout-arrow-selected.png');
+			}
 			a {
 				color:$white;
 			}
@@ -1219,7 +1221,11 @@ table.checkout {
 	th, td { 
 		display: table-cell; 
 		@include box-sizing(border-box);
-
+		.ie9 & {
+			float:none;
+			clear:none;
+			width:auto;
+		}
 	}
 
 	tbody {
@@ -1234,7 +1240,7 @@ table.checkout {
 		border:0;
 		float:left;
 	}
-
+	
 	h6 {
 		margin-bottom: 0;
 		@include font-size(13);
@@ -1251,6 +1257,10 @@ table.checkout {
 		@include font-size(30);
 		font-weight: 300;
 		border-bottom:1px solid $white;
+		.ie9 &,
+		.lt-ie9 & {
+			margin:0;
+		}
 	}
 
 	tbody {
@@ -1261,6 +1271,11 @@ table.checkout {
 	&.four-cols {
 		td {
 			width:25%;
+			.ie9 & {
+				float:left;
+				clear:none;
+				width:25% !important;
+			}
 		}
 
 		&.basket-info {
@@ -1273,7 +1288,37 @@ table.checkout {
 			}
 		}
 	}
+
+	.table-title {
+		width:auto;
+		
+	}
 	
+	.t-underline {
+		border-bottom:1px solid $bodyGrey;
+		@include clearfix;
+	
+		&.t-dotted {
+			border-bottom:2px dotted $bodyGrey;
+
+			&.t-none {
+				border-bottom:0px solid;
+			}
+		}
+
+
+	}
+	
+	td.t-dotted {
+		border-top:0px dotted $bodyGrey;
+	}
+
+	.total {
+		border:0;
+	}
+	
+
+
 }
 
 // show/hide for media widths content ========== //

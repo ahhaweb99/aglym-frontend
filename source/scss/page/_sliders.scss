@@ -12,11 +12,11 @@
 		@include inline-block(top);
 	}
 	.panel-content {
-		@include rem('padding', 18px 15px)
+		@include rem('padding', 18px 15px);
 	}
 
 	.title--slide-large {
-		display: none;
+		//display: none;
 
 	}
 	

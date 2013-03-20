@@ -20,11 +20,21 @@ table.checkout {
 		@include box-sizing(border-box);
 		line-height: $baselineHeight/1.5;
 
-		&.t-underline {
-			border-bottom:1px solid $white;
-			@include clearfix;
+		.ie9 & {
+			float:left;
+			clear:left;
+			width:100%;
 		}
 	}
+
+	td.t-dotted {
+		border-top:2px dotted $bodyGrey;
+
+		&.t-none {
+			border-top:0px solid;
+		}
+	}
+
 	caption {
 		background-color : $bgGrey;
 		display:block;
@@ -36,4 +46,39 @@ table.checkout {
 		margin-right: 20px;
 		margin-bottom: 20px;
 	}
+
+
+	p {
+		margin-bottom: 0;
+	}
+
+	&.basket-info {
+		.table-title {
+			width:113px;
+			margin-bottom:0;
+			line-height: 1.7;
+		}
+	}
+
+	.total {
+		background: $black;
+	}
+
+	.actions {
+		padding-top:$baselineHeight;
+		padding-left:0;
+		padding-bottom:$baselineHeight*2;
+
+	}
 }
+
+.table-wrapper {
+	background-color:#414042;
+	
+	.ie9 &,
+	.lt-ie9 & {
+		padding:$gutterWidth;
+	}
+	
+}
+
