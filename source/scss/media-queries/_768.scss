@@ -1174,7 +1174,7 @@ h4 {
 		text-align: center;
 		width:19.65%;
 		background-color:$bgGrey;
-		padding:7px 0;
+		padding:8px 0;
 		position:relative;
 		overflow: visible;
 		@include font-size(12);
@@ -1189,6 +1189,10 @@ h4 {
 			top:0;
 			right:-19px;
 			z-index:100;
+
+			.lt-ie9 & {
+				display: none;
+			}
 		}
 
 		&:last-child {
@@ -1208,13 +1212,66 @@ h4 {
 }
 
 table.checkout {
+	display:table;
+	border-collapse:collapse;
+	line-height:1;
 
-	 thead, tbody, th, td { 
+	th, td { 
 		display: table-cell; 
+		@include box-sizing(border-box);
+
+	}
+
+	tbody {
+		display:block;
+	}
+
+	tr {
+		display:block;
 	}
 
 	td {
-		width:27.75%;
+		border:0;
+		float:left;
+	}
+
+	h6 {
+		margin-bottom: 0;
+		@include font-size(13);
+
+		&.table-title {
+			margin-bottom: $baselineHeight/2;
+		}
+
+	}
+	
+	caption {
+		padding-bottom:18px;
+		margin:15px 25px 0;
+		@include font-size(30);
+		font-weight: 300;
+		border-bottom:1px solid $white;
+	}
+
+	tbody {
+		padding-bottom:18px;
+		margin:15px 25px 0;
+	}
+
+	&.four-cols {
+		td {
+			width:25%;
+		}
+
+		&.basket-info {
+			td {
+				&:first-child {
+					width:59.25%;
+				}
+
+				width:13%;
+			}
+		}
 	}
 	
 }

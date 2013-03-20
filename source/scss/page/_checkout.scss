@@ -9,11 +9,31 @@
 }
 
 table.checkout {
-	display: table; 
-	 thead, tbody, th, td, tr { 
+	display: table;
+	padding:0;
+	border-collapse:separate;
+	line-height:1;
+	margin-bottom:0;
+	@include box-sizing(border-box);
+	 th, td, tr { 
 		display: block; 
+		@include box-sizing(border-box);
+		line-height: $baselineHeight/1.5;
+
+		&.t-underline {
+			border-bottom:1px solid $white;
+			@include clearfix;
+		}
 	}
 	caption {
 		background-color : $bgGrey;
+		display:block;
+		padding:0;
+		text-transform:none;
+	}
+
+	img {
+		margin-right: 20px;
+		margin-bottom: 20px;
 	}
 }
