@@ -7,5 +7,5 @@ gem "middleman-livereload"
 gem "middleman-sprockets", :git => "git://github.com/middleman/middleman-sprockets.git"
 #gem "breakpoint"
 #gem "susy"
-gem "rb-inotify", "~> 0.9"
+#gem "rb-inotify", "~> 0.9"
 

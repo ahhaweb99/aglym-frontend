@@ -14,7 +14,7 @@
 		}
 	
 	.product-detail & {
-		width:100%;
+		//width:100%;
 	}
 }
 
@@ -34,7 +34,14 @@
 		}
 
 		
-		
+		.product-image {
+			width:39%;
+
+			.product-detail & {
+				width:100%;
+			}
+		}
+
 		border-top:1px solid $white;
 		border-bottom:0px solid $white;
 		@include clearfix;
@@ -53,18 +60,30 @@
 
 	> * {
 		@include inline-block;
+		vertical-align: top;
 	}
 	
 	.product-info {
 		@include rem('margin-top', $baselineHeight/2);
-		@include rem('padding-top', $baselineHeight/2);
+		// @include rem('padding-top', $baselineHeight/2);
 
 		width:54%;
 		float: right;
 		
-		@include rem('margin-bottom', $baselineHeight);
-		@include rem('padding-bottom', $baselineHeight/2);
+		//@include rem('margin-bottom', $baselineHeight);
+		//@include rem('padding-bottom', $baselineHeight/2);
+		
+		.btn {
 
+			#normal--content & {
+				margin-bottom: 0;
+			}
+		}
+
+		.product-detail & {
+			width:100%;
+			float:left;
+		}
 		
 	}
 
@@ -117,7 +136,7 @@
  	}
  	@include rem('padding', 18px 26px 0);
  	.product-info {
- 		margin-bottom: 0;
+ 		margin-bottom: $baselineHeight;
  		padding-top:0;
 
  	}
@@ -129,6 +148,7 @@
  	}
 	
 	.ratings {
+		@include rem('margin-top', 0px);
 		color:$recommendedTitle;
 		i {
 			width:1.2rem;
@@ -193,8 +213,8 @@
 	}
 	
 	.product-detail & {
-		margin:0px 0px $baselineHeight/2 !important;
-		padding:0px !important;
+		// margin:0px 0px $baselineHeight/2 !important;
+		// padding:0px !important;
 
 
 	}
@@ -211,7 +231,7 @@
 }
 
 	.product-detail-image {
-		margin:0 auto $baselineHeight*2;
+		margin:0 auto $baselineHeight;
 	}
 
 .price {		
@@ -260,7 +280,8 @@
 
 .basket-tools {
 	fieldset {
-			@include rem('line-height', 50px);
+			@include rem('line-height', 24px);
+			@include rem('margin-bottom', 0px);
 		> * {
 			display: inline-block;
 		}
@@ -269,6 +290,10 @@
 			clear:left;
 			@include rem('margin-bottom', 24px);
 
+		}
+
+		.btn {
+			margin-bottom: 0px !important;
 		}
 	}
 }
@@ -383,4 +408,8 @@ li.stars {
 	&:hover {
 		border-bottom:1px solid $white;
 	}
+}
+
+.related-products {
+	text-align:center;
 }

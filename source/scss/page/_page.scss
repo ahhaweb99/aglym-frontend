@@ -526,3 +526,33 @@ ul.bullets {
 		}
 	
 }
+
+// flash notices
+
+.flash-notice, .flash-error {
+	width:100%;
+	padding:10px;
+	background-color:$bgGrey;
+	margin-bottom:$baselineHeight/2;
+	 i {
+	 	line-height: 21px;
+	 	margin-right: 8px;
+	 	@include font-size(18);
+	 }
+}
+
+.flash-error {
+		background-color:$autoGlymColor;
+
+}
+
+//google maps img max width fix;
+#map {
+    img {
+      max-width:none;
+     }
+}
+
+div.map-info {
+	color:black !important;
+}

@@ -80,6 +80,16 @@
 			}
 	}
 }
+
+.structure--main-column {
+	.product-detail & {
+		width:65.12%;
+
+		.lt-ie8 & {
+			width:61%;
+		}
+	}
+}
 //_page ======================== //
 
 .logo--autoglym {
@@ -491,17 +501,29 @@
 
 .product-item {
 	.product-info {
-		width:80%;
-		
+		width:59%;
+
 		.list-all & {
 			width:57%;
 		}
 		
 		.product-detail & {
-			
+			width:65.12%;
+		}
+	
+		.related-products & {
+			width:90%;
+
 		}
 
 	}
+
+	.related-products & {
+			.grid--half {
+				width:49.5%;
+			}
+	}
+
 }
 
 .widget--product {
@@ -540,6 +562,8 @@
 			bottom:28px;
 			line-height: 17px;
 		}
+
+		
 }
 
 

@@ -87,3 +87,12 @@
 .indent-left {
 	margin-left:60px;
 }
+
+a.link {
+	border-bottom:1px solid $white;
+
+	&:hover {
+	 border-bottom:0px solid $white;
+
+	}
+}

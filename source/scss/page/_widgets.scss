@@ -32,7 +32,7 @@
 
 		h3 {
 			@include inline-block;
-			width: 72%;
+			width: 100%;
 			@include rem('margin-top', 10px);
 			@include font-size(16);
 			font-weight: 700;
@@ -42,11 +42,13 @@
 
 		.price {  
 			color:$priceColor;
+			width:100%;
 		}
 
 		.btn {
 			float:none;
 			clear:left;
+			margin-bottom: 0 !important;
 		}
 	}
 

@@ -27,14 +27,18 @@
 
 	.product-info {
 
-		width:77%;
+		width:55%;
 	
 		.product-detail & {
 
-			width:67%;
+			width:50%;
 		}
 	}
 
 
 
+}
+
+.related-products {
+	text-align:left;
 }

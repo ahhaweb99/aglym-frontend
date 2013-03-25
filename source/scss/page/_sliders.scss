@@ -37,7 +37,9 @@
 		position: relative;
 		direction: ltr;
 		@include clearfix;
-
+		.structure--content {
+			position:static;
+		}
 		.rsOverflow {
 			position: relative;
 			width:100%;

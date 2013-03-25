@@ -86,7 +86,7 @@ color : $formText;
 }
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="email"], textarea {
 	@include border-radius(5px);
 	@include rem('padding', 5px 8px 5px 14px);
 	@include font-size(14px);
@@ -298,6 +298,7 @@ label {
 }
 
 .form-errors {
+	display:block;
 	i {
 	color:$autoGlymColor;
 	@include font-size(28);
@@ -329,9 +330,12 @@ label {
 }
 
 .form-list {
-	
+
+
 	#normal--content &,
-	.svg #normal--content & {
+	.svg #normal--content &,
+	#cms--content &,
+	.svg #cms--content & {
 		li {
 			background:none;
 			padding-left:0;
@@ -361,14 +365,23 @@ label {
 		}
 
 	}
+
+	select {
+		margin-bottom:$baselineHeight/1.5;
+	}
 	
 	input[type="radio"], input[type="submit"] {
 		width:auto;
 	}
 	
-	input[type="text"] {
+	input[type="text"], input[type="email"] {
 		width:100%;
 		margin-bottom:$baselineHeight/1.5;
+		@include border-radius(0);
+	}
+	
+	.btn {
+		margin-bottom:$baselineHeight;
 	}
 
 	.radio-group {
@@ -377,9 +390,43 @@ label {
 			margin-right:10px;
 		}
 	}
+
+	input[type="checkbox"] {
+		margin-right: 10px;
+		margin-top: 6px;
+		margin-bottom: $baselineHeight;
+	}
+	
+	.error {
+		p {
+			color:$autoGlymColor;
+		}
+	}
+
+	&.landing-page {
+	
+		
+		p {
+			margin-bottom: 0;
+			width:91%;
+			float:right;
+		}
+		
+	}
+
 }
 
 .radio-group {
 
 
 }
+
+.error-list {
+	margin-top:$baselineHeight/2;
+	li {
+		background:image-url('bg-bullets.png') 0 10px no-repeat;
+		padding-left:10px;
+	}
+}
+
+p.inline-errors { display: none; }

@@ -84,20 +84,36 @@ configure :build do
 end
 page "home-page.html", :layout => "layout"
 page "styleguide.html", :layout => "layout-inner"
+
 page "wide-page.html", :layout => "layout-inner"
+
 page "news.html", :layout => "layout-inner"
 page "news-article.html", :layout => "layout-inner"
+
 page "product-thumbs.html", :layout => "layout-inner-products"
 page "product-all.html", :layout => "layout-inner-products"
 page "product-overview.html", :layout => "layout-inner-products"
 page "product-detail.html", :layout => "layout-inner-products"
 page "product-review-form.html", :layout => "layout-inner-products"
+
 page "valeting-bay.html", :layout => "layout-inner-valeting"
 page "valeting-bay-results.html", :layout => "layout-inner-valeting"
+
 page "search-results.html", :layout => "layout-inner"
 page "search-results-two.html", :layout => "layout-inner"
+
 page "where-to-buy.html", :layout => "layout-inner"
 page "where-to-buy-results.html", :layout => "layout-inner"
+
 page "contact-us.html", :layout => "layout-inner"
+
+page "checkout-01-basket.html", :layout => "layout-inner"
+page "checkout-02-address.html", :layout => "layout-inner"
+page "checkout-03-delivery.html", :layout => "layout-inner"
+page "checkout-04-payment.html", :layout => "layout-inner"
 page "checkout-05-complete.html", :layout => "layout-inner"
+
+page "car-care-guide.html", :layout => "layout-landing"
+page "car-care-guide-thanks.html", :layout => "layout-landing"
+page "pop-up.html", :layout => "layout-pop-up"
 

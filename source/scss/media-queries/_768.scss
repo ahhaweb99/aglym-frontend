@@ -62,15 +62,13 @@
 	width:70.31%;
 	float:right;
 	.product-detail > & {
-		width:67.12%;
-		@include rem('margin-top', -430px);
+		width:60.12%;
 		position: relative;
 		z-index: 2;
 		border:1px solid transparent;
 		@include clearfix;
 		
 		.lt-ie9 & {
-			@include rem('margin-top', -427px);
 
 		}
 	}
@@ -80,6 +78,10 @@
 		zoom:1;
 		width:69%;
 		vertical-align: top;
+	}
+
+	&.grid--half {
+		width:62%;
 	}
 }
 
@@ -106,6 +108,15 @@
 
 	.reviews-list & {
 		width:48.62%;
+	}
+
+	.form-wrapper & {
+		width:48%;
+	}
+
+	.related-products > & {
+		width:49%;
+		margin-bottom: $baselineHeight;
 	}
 }
 
@@ -631,34 +642,42 @@
 	
 	.product-image {
 		float:left;
+
+		.product-detail & {
+			width:auto;
+		}
 	}
 
 	.product-info {
-		@include rem('margin-top', $baselineHeight);
+		@include rem('margin-top', $baselineHeight/2);
 		@include rem('padding-top', $baselineHeight);
-		width:75%;
+		width:55%;
 		border-top:1px solid $white;
 		border-bottom:1px solid $white;
-	
+		
+		@include rem('margin-bottom', $baselineHeight);
+		@include rem('padding-bottom', $baselineHeight);
 		.list-all & {
 			width:52%;
 		}
 		
 		.product-detail & {
-			width:67%;
-		
+			width:60.12%;
+			float:right;
 			@include rem('margin-top', 0px);
 			@include rem('padding-top', 0px);
 
 			border-top:0px solid $white;
 			border-bottom:0px solid $white;
+		
+			
 		}
+		
 		
 
 	}
 
 	
-
 	.button-wrapper {
 		width:70%;
 		float:right;
@@ -666,12 +685,29 @@
 
 }
 
+	h1.product-title {
+			.product-detail & {
+				font-size:24px !important ;
+			}
+	}
+	
+	.ratings {
+		margin-top: 0rem !important;
+		margin-top:0px !important;
+		margin-bottom:$baselineHeight !important;
+	
+	}
+
 .related-products {
 	.product-info {
 		.product-detail & {
-			width:62%;
+			width:85%;
+			margin-bottom: 0;
 		}
 		
+		.ratings {
+
+		}
 	}
 }
 
@@ -696,6 +732,7 @@
 		padding:0;
 		border-bottom: 1px solid $white;
 		display: block;
+		width:100%;
 	}
 
 
@@ -706,14 +743,23 @@
 		position: relative;
 		top:-$baselineHeight;
 	}
+
+	.grid--one {
+		width:32.5%;
+	}
 }
+
 
 .product-detail-image {
 	margin:0 auto $baselineHeight*2 $baselineHeight;
+
+	.product-detail & {
+		margin:0 0 $baselineHeight*2 0;
+	}
 }
 
 .product-information {
-	@include rem('min-height', 209px);
+	//@include rem('min-height', 209px);
 }
 
 .basket-tools {
@@ -1046,6 +1092,70 @@
 
 }
 
+.form-list {
+	
+	li {
+
+	}
+
+	&.radio-group {
+		li {
+			clear:none;
+			@include inline-block(top);
+			width:31.25%;
+		}
+		
+		input[type="radio"] {
+			float:left;
+			margin-top:8px;
+			margin-right:5px;
+		}
+	}
+	&.landing-page {
+		width:71.4%;
+		
+		p {
+			margin-bottom: 0;
+			width:93%;
+			float:none;
+		}
+		
+	}
+
+	&.credit-card {
+		ol {
+			@include clearfix;
+		}
+		input[type="radio"] {
+			float:left;
+			margin-top:8px;
+			margin-right:5px;
+		}
+
+		input[type="text"]{
+			width:324px;
+			margin-right:10px;
+			
+		}
+		
+		li { 
+			
+			line-height: 32px;
+			margin-right:0.6%;
+			@include clearfix;
+			&.card {
+				width:378px;
+				float:none;
+			}
+
+			&:first-child {
+				width:auto;
+			}
+		}
+	}
+
+}
+
 // _cms-content ========== //
 #normal--content,
 #cms--content {
@@ -1240,6 +1350,8 @@ table.checkout {
 		border:0;
 		float:left;
 	}
+
+
 	
 	h6 {
 		margin-bottom: 0;
@@ -1265,7 +1377,7 @@ table.checkout {
 
 	tbody {
 		padding-bottom:18px;
-		margin:15px 25px 0;
+		margin:0 25px 0;
 	}
 
 	&.four-cols {
@@ -1282,11 +1394,58 @@ table.checkout {
 			td {
 				&:first-child {
 					width:59.25%;
+					&.actions {
+						width:100%;
+					}
+				}
+
+				&.gap {
+					border-top:0px dotted $bodyGrey;
+					padding-top:$baselineHeight/2;
+				}
+
+				&.actions {
+					width:100%;
 				}
 
 				width:13%;
 			}
+		
+			&.your-basket {
+				td {
+					&:first-child {
+						width:49.25%;
+						&.actions {
+							width:100%;
+							padding-right:0;
+						}
+
+						.ie9 & {
+							float:left;
+							clear:none;
+							width:49.25% !important;
+						}
+					}
+					width:16%;
+
+					.ie9 & {
+							
+							width:16% !important;
+						}
+
+					&.actions {
+						width:100%;
+
+						.ie9 & {
+							width:100% !important;
+						}
+					}
+				}
+			}
+
 		}
+
+
 	}
 
 	.table-title {
@@ -1316,7 +1475,42 @@ table.checkout {
 	.total {
 		border:0;
 	}
+
+	input[type="number"] {
+		width:48px;
+		@include font-size(13);
+		margin-bottom: 10px;
+	}
 	
+	.quantity {
+		display: inline-block;
+		margin:10px 0 0;
+
+		p {
+			@include font-size(13);
+		}
+	}
+
+	.btn {
+		display: inline-block;
+		clear:both;
+		float:none;
+		margin-bottom: 0;
+	}
+	
+	.btn-checkout {
+		float:right;
+		clear:none;
+		.lt-ie8 & {
+			margin-top:-32px;
+		}
+	}
+
+	a {
+		&:hover {
+			border-bottom:1px solid $white;
+		}
+	}
 
 
 }
@@ -1351,3 +1545,8 @@ table.checkout {
 	display:none !important;
 }
 
+
+/* _buttons */
+.back-link {
+	margin-bottom:0;
+}
